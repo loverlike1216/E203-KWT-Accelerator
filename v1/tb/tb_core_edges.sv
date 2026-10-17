@@ -34,6 +34,7 @@ module tb_core_edges;
         end
     endtask
     initial begin
+        if($test$plusargs("WAVE")) begin $dumpfile("core_edges.vcd"); $dumpvars(0,tb_core_edges); end
         repeat(3) @(negedge clk); rst_n=1;
         if(busy||done||out_valid) $fatal(1,"Reset unexpectedly starts work");
         x_data=-16'sd32768;

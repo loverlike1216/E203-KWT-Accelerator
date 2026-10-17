@@ -24,7 +24,9 @@ def sha256(path):
 def write_json(path, data):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    temporary = path.with_name(path.name + f".tmp-{os.getpid()}")
+    temporary.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    temporary.replace(path)
 
 
 def tool_env():
@@ -55,16 +57,25 @@ def run(args, name, cwd=ROOT, timeout=300):
     stamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
     display = " ".join(map(str, args))
     print("RUN", display if len(display) < 600 else display[:550] + f" ... ({len(args)} arguments; full command in metadata)", flush=True)
-    result = subprocess.run(list(map(str, args)), cwd=cwd, env=tool_env(),
-                            capture_output=True, text=True, encoding="utf-8",
-                            errors="replace", timeout=timeout)
-    log = directory / f"{name}.log"
-    log.write_text(result.stdout + result.stderr, encoding="utf-8")
+    run_id = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d-%H%M%S-%f") + f"-{os.getpid()}"
+    log = directory / f"{name}-{run_id}.log"
+    # Stream directly to a local log so a long simulator is observable mid-run.
+    with log.open("w", encoding="utf-8") as stream:
+        process = subprocess.Popen(list(map(str,args)),cwd=cwd,env=tool_env(),stdout=stream,stderr=subprocess.STDOUT)
+        try:
+            returncode = process.wait(timeout=timeout)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            process.wait()
+            stream.write(f"\nTIMEOUT after {timeout}s\n")
+            returncode = 124
+    output = log.read_text(encoding="utf-8",errors="replace")
     metadata = {"command": list(map(str, args)), "cwd": str(cwd), "started_at": stamp,
-                "returncode": result.returncode, "elapsed_seconds": time.monotonic() - start,
+                "returncode": returncode, "elapsed_seconds": time.monotonic() - start,
                 "log": str(log.relative_to(ROOT)), "log_sha256": sha256(log)}
-    write_json(directory / f"{name}.json", metadata)
-    print((result.stdout + result.stderr)[-4000:], flush=True)
-    if result.returncode:
-        raise subprocess.CalledProcessError(result.returncode, args)
-    return result.stdout + result.stderr, metadata
+    write_json(directory / f"{name}-{run_id}.json", metadata)
+    write_json(directory / f"{name}.json", metadata)  # latest pointer; history remains immutable
+    print(output[-4000:], flush=True)
+    if returncode:
+        raise subprocess.CalledProcessError(returncode, args)
+    return output, metadata

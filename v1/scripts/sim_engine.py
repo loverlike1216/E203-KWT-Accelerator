@@ -14,7 +14,9 @@ def main():
         output = directory / (top + ".vvp")
         _, compile_info = run([executable("iverilog"), "-g2012", "-Wall", "-s", top,
             "-o", output, *rtl, ROOT / "v1/tb" / (top + ".sv")], top + "_compile")
-        text, info = run([executable("vvp"), output, f"+VECTORS={(WORK/'vectors').as_posix()}"], top, cwd=directory, timeout=900)
+        command=[executable("vvp"), output, f"+VECTORS={(WORK/'vectors').as_posix()}"]
+        if top=="tb_core_edges": command.append("+WAVE")
+        text, info = run(command, top, cwd=directory, timeout=900)
         marker = "CORE_EDGES_PASS" if top == "tb_core_edges" else "ENGINE_PASS"
         if marker not in text:
             raise RuntimeError(f"Missing actual simulator completion marker: {marker}")

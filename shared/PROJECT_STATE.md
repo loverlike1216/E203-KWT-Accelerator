@@ -1,7 +1,7 @@
 # Project state
 
-Stage 3 — reference E203 integration
+Stage 3 — reference E203 integration and clean replay
 
-Next: Complete genuine E203 C driver simulation, then clean replay and official migration handoff
+Next: Finish actual CPU integration evidence and clean local replay; then hand off official migration
 
 Canonical machine state: PROJECT_STATE.json.

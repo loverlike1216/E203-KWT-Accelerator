@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "evidence_class": "ALTERNATIVE_VALIDATION",
+  "scope": "Boundary-test debug waveform only, not representative KWT power workload",
+  "waveform": "work/activity/core_edges.vcd",
+  "sha256": "223b79490629bb4e55ea65e58724d44a693f067e79fcb173d545cff72ea37aab",
+  "formal_power_evidence": "NOT_VERIFIED",
+  "run": {
+    "command": [
+      "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\vvp.EXE",
+      "E:\\Codex_project\\E203-KWT-Accelerator\\work\\activity\\edges.vvp",
+      "+WAVE"
+    ],
+    "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\activity",
+    "started_at": "2026-10-17T20:11:04.528292+00:00",
+    "returncode": 0,
+    "elapsed_seconds": 0.031000000017229468,
+    "log": "work\\logs\\activity_edges.log",
+    "log_sha256": "fea3651fedb112840a08aa71af5e80b0e5dbeccf6a1b5f52e5a2b945212c6a49"
+  }
+}

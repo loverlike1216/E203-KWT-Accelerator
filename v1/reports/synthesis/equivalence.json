@@ -1,0 +1,20 @@
+{
+  "status": "UNVERIFIED",
+  "evidence_class": "ALTERNATIVE_VALIDATION",
+  "reason": "Bounded SAT proof timed out after 180 seconds; no complete equivalence or mismatch conclusion.",
+  "rtl_sha256": "4f7b57e0c9456f0da3b4afa8ae39b85b40f78f0511e2bcb113abdcd6c8bf01ae",
+  "netlist_sha256": "2858c90f917016a60d85cbf3fbdc4bc5da886e61f1fbc872c22dccb0d0c6c36f",
+  "attempt": {
+    "command": [
+      "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\yosys.EXE",
+      "-s",
+      "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis\\equivalence.ys"
+    ],
+    "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+    "started_at": "2026-10-17T20:08:36.157753+00:00",
+    "returncode": 124,
+    "elapsed_seconds": 180.0470000000205,
+    "log": "work\\logs\\core_equivalence.log",
+    "log_sha256": "7ce0cbbe0ef5b81440f4266c4d87ddb2bd6bc69b93e802856e76c808c3e2e129"
+  }
+}

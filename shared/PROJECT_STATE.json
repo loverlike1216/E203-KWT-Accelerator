@@ -5,11 +5,11 @@
   "workspace_path": "E:\\Codex_project\\E203-KWT-Accelerator",
   "branch": "main",
   "active_version": "v1",
-  "current_stage": "Stage 3 — reference E203 integration",
+  "current_stage": "Stage 3 — reference E203 integration and clean replay",
   "status": "PROJECT_ACTIVE",
-  "latest_context_checkpoint": "CP-20261017-200742__v1",
+  "latest_context_checkpoint": "CP-20261017-201644__v1",
   "checkpoint_commit": null,
-  "checkpoint_base_commit": "dd393cbcafc07d38dc4a04cf6e8ee3982f1fe59c",
+  "checkpoint_base_commit": "22dfd8193964464247378d84497b3d84b2c35d35",
   "checkpoint_status": "VALID_LOCAL_REFERENCE",
   "chat_source_name": "UNKNOWN",
   "open_ai_problems": [],
@@ -19,7 +19,7 @@
     "OFFICIAL_ASIC_FLOW_PENDING"
   ],
   "critical_issues": [],
-  "next_action": "Complete genuine E203 C driver simulation, then clean replay and official migration handoff",
+  "next_action": "Finish actual CPU integration evidence and clean local replay; then hand off official migration",
   "environment_profile": "local_reference",
   "formal_acceptance": "NOT_VERIFIED"
 }

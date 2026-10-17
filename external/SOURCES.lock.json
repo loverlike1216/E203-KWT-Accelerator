@@ -1,0 +1,47 @@
+{
+  "resources": [
+    {
+      "name": "keyword-transformer",
+      "url": "https://github.com/ARM-software/keyword-transformer.git",
+      "commit": "237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+      "license_files": {
+        "LICENSE.txt": "5ad8c213095c573921d7388edf93f6a9f54490b8ebf3b165ae8ef1947cf70846"
+      },
+      "is_official_platform": false,
+      "download_status": "VERIFIED"
+    },
+    {
+      "name": "e203_hbirdv2",
+      "url": "https://github.com/riscv-mcu/e203_hbirdv2.git",
+      "commit": "9f3e34f337f5d0a1236a285871ffa2032491617a",
+      "license_files": {
+        "LICENSE": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+      },
+      "is_official_platform": false,
+      "download_status": "VERIFIED"
+    },
+    {
+      "name": "oss-cad-suite",
+      "url": "https://github.com/YosysHQ/oss-cad-suite-build/releases/download/2026-10-17/oss-cad-suite-windows-x64-20261017.tgz",
+      "sha256": "842e7890bbfd1b7527f256ba6ff52666392f9707339f1189829849de9ef77dbf",
+      "expected_sha256": "842e7890bbfd1b7527f256ba6ff52666392f9707339f1189829849de9ef77dbf",
+      "download_status": "VERIFIED"
+    },
+    {
+      "name": "riscv-gcc",
+      "url": "https://github.com/xpack-dev-tools/riscv-none-elf-gcc-xpack/releases/download/v15.2.0-1/xpack-riscv-none-elf-gcc-15.2.0-1-win32-x64.zip",
+      "sha256": "85ef714dacd273b1dadf4af4892774520ac01915bfa6da816a56e7e41591e09e",
+      "expected_sha256": "85ef714dacd273b1dadf4af4892774520ac01915bfa6da816a56e7e41591e09e",
+      "download_status": "VERIFIED"
+    },
+    {
+      "name": "speech_commands_v0.02",
+      "url": "https://storage.googleapis.com/download.tensorflow.org/data/speech_commands_v0.02.tar.gz",
+      "sha256": "af14739ee7dc311471de98f5f9d2c9191b18aedfe957f4a6ff791c709868ff58",
+      "expected_sha256": "af14739ee7dc311471de98f5f9d2c9191b18aedfe957f4a6ff791c709868ff58",
+      "download_status": "VERIFIED"
+    }
+  ],
+  "official_server": "NOT_PROVIDED",
+  "redistribution": "External source, tool binaries, audio and restricted inputs excluded from source delivery."
+}

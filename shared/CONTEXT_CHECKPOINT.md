@@ -1,9 +1,9 @@
-# Context Checkpoint CP-20261017-200742__v1
+# Context Checkpoint CP-20261017-201644__v1
 
 Project: E203-KWT-Accelerator. Repository: https://github.com/loverlike1216/E203-KWT-Accelerator.git
 Workspace: E:\Codex_project\E203-KWT-Accelerator. Branch: main. Version: v1 / ACTIVE.
-Generation base commit: dd393cbcafc07d38dc4a04cf6e8ee3982f1fe59c. Stage: Stage 3 — reference E203 integration.
-Reason: Twelve full matrix RTL tasks and mapped core boundary tests passed. Created: 2026-10-17T20:07:42.549371+00:00.
+Generation base commit: 22dfd8193964464247378d84497b3d84b2c35d35. Stage: Stage 3 — reference E203 integration and clean replay.
+Reason: Portable integration implemented; full RTL baseline verified; official environment remains pending. Created: 2026-10-17T20:16:44.326180+00:00.
 
 ## Goal and architecture
 Portable local implementation of the undergraduate FFN linear task; official
@@ -13,12 +13,12 @@ platform binding and PPA remain pending. Read shared/EXECUTION_CONTRACT.md.
 - v1/reports/environment/environment.json: PASS / ALTERNATIVE_VALIDATION / SHA256 bd048d88b352c4128abed41a16d9241653b874e7329c0ce6e0d61ef7ff036561
 - v1/reports/soc/reference_baseline.json: PASS / ALTERNATIVE_VALIDATION / SHA256 30b27c9d024c6cd8829037a561d5801da3b30d0b7c6b2bf1f8e625b9ae996a32
 - v1/reports/model/checkpoint_inventory.json: PASS / ALTERNATIVE_VALIDATION / SHA256 32932c0ef51b07f37f289514bf0621211c030d19458fd004827a2ca91c189b20
-- v1/reports/model/quantization.json: PASS / ALTERNATIVE_VALIDATION / SHA256 2e4144e70277e33d5276660a3df128c7acd93cce172daa0b2f8d264b658c5e5a
+- v1/reports/model/quantization.json: PASS / ALTERNATIVE_VALIDATION / SHA256 5157935132d72c63d6dff189aaea9de0ee3bd152ba2320907d60edfb804f9910
 - v1/reports/rtl/engine.json: PASS / ALTERNATIVE_VALIDATION / SHA256 ea31a4a7e3f92adeda24fd862e6164afdb5f1f71472d92bf0c8982a04e372773
 - v1/reports/synthesis/reference.json: PASS / ALTERNATIVE_VALIDATION / SHA256 02d28f77d5754c924992a20c8530f56936e43c3189988ca3633161f6540906d1
 
 ## Current plan and next action
-Complete genuine E203 C driver simulation, then clean replay and official migration handoff
+Finish actual CPU integration evidence and clean local replay; then hand off official migration
 
 ## Decisions, blockers and limits
 Read shared/DECISIONS.md, BLOCKERS.md and ACCEPTANCE.md. Only user decisions are

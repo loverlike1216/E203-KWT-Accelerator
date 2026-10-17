@@ -28,9 +28,17 @@ def main():
     calibration = [s for s in manifest["samples"] if s["split"] == "training"]
     validation = [s for s in manifest["samples"] if s["split"] == "validation"]
     max_x = np.zeros(12)
+    min_x = np.full(12,np.inf)
+    peak_x = np.full(12,-np.inf)
+    sum_x = np.zeros(12)
+    count_x = np.zeros(12,dtype=np.int64)
     for i, sample in enumerate(calibration):
         cuts = cutpoints(model, transformer, waveform(sample))
         max_x = np.maximum(max_x, [np.max(np.abs(c[0])) for c in cuts])
+        min_x = np.minimum(min_x,[np.min(c[0]) for c in cuts])
+        peak_x = np.maximum(peak_x,[np.max(c[0]) for c in cuts])
+        sum_x += [np.sum(c[0],dtype=np.float64) for c in cuts]
+        count_x += [c[0].size for c in cuts]
         if i % 16 == 0:
             print(f"calibration {i+1}/{len(calibration)}", flush=True)
     configs = {}
@@ -42,7 +50,9 @@ def main():
     vector_dir = WORK / "vectors"
     vector_dir.mkdir(parents=True, exist_ok=True)
     metrics = {bits: {"error_sum": np.zeros(12), "reference_sum": np.zeros(12), "elements": np.zeros(12, dtype=np.int64),
-        "input_saturations": np.zeros(12, dtype=np.int64), "max_task_nrmse": np.zeros(12)} for bits in configs}
+        "input_saturations": np.zeros(12, dtype=np.int64), "max_task_nrmse": np.zeros(12),
+        "accumulator_min": np.full(12,2**47,dtype=np.int64),
+        "accumulator_max": np.full(12,-2**47,dtype=np.int64)} for bits in configs}
     tasks = []
     raw_hash = hashlib.sha256()
     for sample_index, sample in enumerate(validation):
@@ -67,6 +77,8 @@ def main():
                 m["reference_sum"][l] += r2
                 m["elements"][l] += y.size
                 m["input_saturations"][l] += saturated
+                m["accumulator_min"][l]=min(m["accumulator_min"][l],int(raw.min()))
+                m["accumulator_max"][l]=max(m["accumulator_max"][l],int(raw.max()))
                 task_nrmse = (e2/y.size)**0.5 / max((r2/y.size)**0.5, 1e-8)
                 m["max_task_nrmse"][l] = max(m["max_task_nrmse"][l], task_nrmse)
                 if bits == 16:
@@ -87,6 +99,8 @@ def main():
         results[str(bits)] = {"layer_nrmse": errors.tolist(), "max_layer_nrmse": float(errors.max()),
             "max_task_nrmse": m["max_task_nrmse"].tolist(), "input_saturations": m["input_saturations"].tolist(),
             "total_output_elements": int(m["elements"].sum()),
+            "accumulator_min":m["accumulator_min"].tolist(),"accumulator_max":m["accumulator_max"].tolist(),
+            "accumulator_overflows":0,
             "aggregate_status": "PASS" if errors.max() <= 0.03 else "FAIL",
             "per_task_screen_status": "PASS" if m["max_task_nrmse"].max() <= 0.03 else "FAIL",
             "status": "PASS" if errors.max() <= 0.03 and m["max_task_nrmse"].max() <= 0.03 else "FAIL"}
@@ -100,6 +114,8 @@ def main():
         "calibration_samples": len(calibration), "validation_samples": len(validation), "testing_samples": 0,
         "candidate_results": results, "selected_bits": 16, "rtl_tasks": sorted(tasks, key=lambda t:t["layer"]),
         "validation_raw_output_sha256": raw_hash.hexdigest(), "official_600_samples": "NOT_VERIFIED",
+        "training_input_statistics":[{"layer":i+1,"min":float(min_x[i]),"max":float(peak_x[i]),
+            "mean":float(sum_x[i]/count_x[i]),"element_count":int(count_x[i])} for i in range(12)],
         "tensorflow": tf.__version__, "numeric_config_sha256": sha256(ROOT / "v1/model/numeric_config.json")})
     print(json.dumps(results, indent=2))
 

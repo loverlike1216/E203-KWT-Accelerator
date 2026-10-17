@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "scope": "Current copies byte-match all seven original Markdown instructions; PDF matches initial audit SHA256. Original preparation files were not edited.",
+  "markdown_copies": [
+    {
+      "file": "00_使用说明.md",
+      "original_sha256": "5dd05dd6320938359c6f9363e493fa480b9f621f9319bd646938f7d792d1c385",
+      "copied_sha256": "5dd05dd6320938359c6f9363e493fa480b9f621f9319bd646938f7d792d1c385",
+      "identical": true
+    },
+    {
+      "file": "01_CODEX_启动词.md",
+      "original_sha256": "bfb2e3e0fd74ea5e2e9d4526c75a334910d5ecb5d2ccdee9d1d51b99edbbd58d",
+      "copied_sha256": "bfb2e3e0fd74ea5e2e9d4526c75a334910d5ecb5d2ccdee9d1d51b99edbbd58d",
+      "identical": true
+    },
+    {
+      "file": "02_CODEX_总指令.md",
+      "original_sha256": "759a453452d1d5f07da41f605e059ccb64e23a0fa1aad586a16c91ebe177cb1c",
+      "copied_sha256": "759a453452d1d5f07da41f605e059ccb64e23a0fa1aad586a16c91ebe177cb1c",
+      "identical": true
+    },
+    {
+      "file": "03_附件与资源清单.md",
+      "original_sha256": "7905c9a348aefa842f334d943212135954089ed2560c45b4cbd2e75baec8a9aa",
+      "copied_sha256": "7905c9a348aefa842f334d943212135954089ed2560c45b4cbd2e75baec8a9aa",
+      "identical": true
+    },
+    {
+      "file": "04_验收与质量门禁.md",
+      "original_sha256": "abb06ddfa7b12d81ce8897807be48abf2295ad04c4dbcb76b7efe1afa16c3197",
+      "copied_sha256": "abb06ddfa7b12d81ce8897807be48abf2295ad04c4dbcb76b7efe1afa16c3197",
+      "identical": true
+    },
+    {
+      "file": "05_调研与创新基线.md",
+      "original_sha256": "b864ba918e329dbbcc47b76c965d6fde2dd2e1fc710bbdcfa9fa5c351396ac15",
+      "copied_sha256": "b864ba918e329dbbcc47b76c965d6fde2dd2e1fc710bbdcfa9fa5c351396ac15",
+      "identical": true
+    },
+    {
+      "file": "06_CODEX_续跑词.md",
+      "original_sha256": "59eb1e044c69470a66d9de5b30e2d5fe1ca84d33e79b089030850d52a00b9751",
+      "copied_sha256": "59eb1e044c69470a66d9de5b30e2d5fe1ca84d33e79b089030850d52a00b9751",
+      "identical": true
+    }
+  ],
+  "pdf_sha256": "b73a5414b4dcdb2cca337778a133be88705e207bec080687731d63b413ea927c"
+}
