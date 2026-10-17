@@ -1,0 +1,25 @@
+{
+  "project_id": "E203-KWT-Accelerator",
+  "project_name": "E203-KWT-Accelerator",
+  "repository": "https://github.com/loverlike1216/E203-KWT-Accelerator.git",
+  "workspace_path": "E:\\Codex_project\\E203-KWT-Accelerator",
+  "branch": "main",
+  "active_version": "v1",
+  "current_stage": "Stage 1 — local numeric baseline",
+  "status": "PROJECT_ACTIVE",
+  "latest_context_checkpoint": "CP-20261017-195944__v1",
+  "checkpoint_commit": null,
+  "checkpoint_base_commit": "d61fb3369158bcc7cd787d4269c9ad8c83900b7d",
+  "checkpoint_status": "VALID_LOCAL_REFERENCE",
+  "chat_source_name": "UNKNOWN",
+  "open_ai_problems": [],
+  "blocking_issues": [
+    "OFFICIAL_PLATFORM_PENDING",
+    "OFFICIAL_MACROS_PENDING",
+    "OFFICIAL_ASIC_FLOW_PENDING"
+  ],
+  "critical_issues": [],
+  "next_action": "Finish training-only calibration and separate speech validation, then implement full-matrix RTL",
+  "environment_profile": "local_reference",
+  "formal_acceptance": "NOT_VERIFIED"
+}

@@ -1,0 +1,24 @@
+# Restricted competition files and original preparation package stay local.
+/E203_KWT1_Codex_OneShot_Package/
+/0*_CODEX_*.md
+/03_附件与资源清单.md
+/04_验收与质量门禁.md
+/05_调研与创新基线.md
+/inputs/official/**
+!/inputs/official/README.md
+/external/src/
+/external/cache/
+/toolchains/
+/envs/
+/work/
+*.vcd
+*.saif
+*.fst
+__pycache__/
+*.pyc
+.env
+.env.*
+*.key
+*.pem
+*.lic
+*.log

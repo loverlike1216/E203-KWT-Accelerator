@@ -1,0 +1,9 @@
+{
+  "active_version": "v1",
+  "highest_version": "v1",
+  "status": "ACTIVE",
+  "upgrade_pending": false,
+  "pending_target": null,
+  "frozen_versions": [],
+  "legacy_versions": []
+}

@@ -1,0 +1,28 @@
+# 先由用户本人填写，另存 bootstrap/PROJECT_INPUTS.yaml。
+# 这里的示例字符串不是已批准的正式身份，不能被 Agent 自行当作事实。
+project_id: "REPLACE_WITH_USER_APPROVED_PROJECT_ID"
+project_name: "E203-KWT-Accelerator"    # 候选名，用户确认后生效
+repository_url: "https://github.com/REPLACE_OWNER/REPLACE_REPOSITORY"
+workspace_path: "E:\\REPLACE_WITH_REAL_WORKSPACE"
+current_branch: "main"    # 如实际不是 main，填实际 branch
+active_version: "v1"
+chat_source_name: "芯片设计竞赛-独立窗口"
+execution_policy: "one_continuous_run_with_quality_gates"
+target_days: 7
+repository_created_manually_by_user: false  # 用户建好正式 repo 后改为 true
+user_explicitly_approves_project_start: false  # 用户正式批准启动时改为 true
+official_rules_pdf: "bootstrap/OFFICIAL_RULES_用户提供.pdf"
+official_e203_platform_path: "inputs/official/REPLACE_platform_directory_or_archive"
+official_sram_mac_path: "inputs/official/REPLACE_sram_library_path"
+official_standard_cell_liberty_path: "inputs/official/REPLACE_liberty_path"
+official_constraints_or_examples_path: "inputs/official/REPLACE_SDC_or_examples"
+official_power_flow_path: "inputs/official/REPLACE_power_scripts_path"
+eda_tool_access_notes: "REPLACE_tools_versions_and_license_method_no_secrets"
+network_download_public_sources: true
+allow_user_scoped_dependency_install: true
+allow_system_wide_software_changes: false
+allow_paid_services_or_api: false
+allow_overwrite_other_projects: false
+allow_force_push: false
+allow_irreversible_data_delete: false
+allow_public_upload_of_official_pdk: false

@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "profile": "local_reference",
+  "evidence_class": "ALTERNATIVE_VALIDATION",
+  "project_id": "E203-KWT-Accelerator",
+  "repository": "https://github.com/loverlike1216/E203-KWT-Accelerator.git",
+  "workspace": "E:\\Codex_project\\E203-KWT-Accelerator",
+  "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "tensorflow": "2.10.1",
+  "numpy": "1.23.5",
+  "tools": {
+    "iverilog": {
+      "version": "Icarus Verilog version 14.0 (devel) (s20260301-585-gf190dbb26-dirty)",
+      "executable_sha256": "332ea9a6267b7db88fe32973c88d89e0ee61dffec1bfbc5c8221b44675a9b7ad",
+      "command": [
+        "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\iverilog.EXE",
+        "-V"
+      ],
+      "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+      "started_at": "2026-10-17T19:58:48.752650+00:00",
+      "returncode": 0,
+      "elapsed_seconds": 0.1720000000204891,
+      "log": "work\\logs\\version_iverilog.log",
+      "log_sha256": "288216f16f99cc9931d5f991547bd9f8f30646eb0ca3b053986c66b80b934d43"
+    },
+    "yosys": {
+      "version": "Yosys 0.70+157 (git sha1 af9f71e51, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+      "executable_sha256": "9084cff16edb8a3c0bc3f6d3cfeb23c1c66afc749838a6703e5fd6cb4d69bb68",
+      "command": [
+        "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\yosys.EXE",
+        "-V"
+      ],
+      "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+      "started_at": "2026-10-17T19:58:48.926544+00:00",
+      "returncode": 0,
+      "elapsed_seconds": 0.06300000002374873,
+      "log": "work\\logs\\version_yosys.log",
+      "log_sha256": "acb37350ab14f74231045cd87964ab3e326e10b979a51cb903de684090079151"
+    },
+    "git": {
+      "version": "git version 2.55.0.windows.5",
+      "executable_sha256": "78211c7ed73988da93a6d8a33d47ec6187f464d7ea2a9a00c182bbd7a1ecf30f",
+      "command": [
+        "D:\\Claude&DeepSeek\\Git\\cmd\\git.EXE",
+        "--version"
+      ],
+      "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+      "started_at": "2026-10-17T19:58:49.038819+00:00",
+      "returncode": 0,
+      "elapsed_seconds": 0.0470000000204891,
+      "log": "work\\logs\\version_git.log",
+      "log_sha256": "a7d641f98c0153e5a737d61cbe785ffa45086dce3d6708fd8bb679e7de3bdd81"
+    },
+    "riscv_gcc": {
+      "version": "riscv-none-elf-gcc.exe (xPack GNU RISC-V Embedded GCC x86_64) 15.2.0",
+      "command": [
+        "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\xpack-riscv-none-elf-gcc-15.2.0-1\\bin\\riscv-none-elf-gcc.exe",
+        "--version"
+      ],
+      "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+      "started_at": "2026-10-17T19:58:49.103459+00:00",
+      "returncode": 0,
+      "elapsed_seconds": 0.030999999959021807,
+      "log": "work\\logs\\version_riscv_gcc.log",
+      "log_sha256": "56e9ba794dc0f3d4846eef892db8f5528046f8dfb5dbec6d5f63ddf06d5fea40"
+    }
+  },
+  "official_server": "NOT_PROVIDED",
+  "official_pdk": "NOT_PROVIDED",
+  "official_power_flow": "NOT_PROVIDED"
+}

@@ -1,0 +1,12 @@
+{
+  "profile": "local_reference",
+  "evidence_class": "ALTERNATIVE_VALIDATION",
+  "e203_source": "external/src/e203_hbirdv2",
+  "model_source": "external/src/keyword-transformer",
+  "memory_binding": "synchronous_behavioral",
+  "target_frequency_hz": 150000000,
+  "official_pdk": null,
+  "official_sram": null,
+  "official_constraints": null,
+  "formal_acceptance_allowed": false
+}

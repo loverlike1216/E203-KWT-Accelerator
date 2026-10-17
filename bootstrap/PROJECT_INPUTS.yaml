@@ -1,0 +1,28 @@
+project_id: "E203-KWT-Accelerator"
+project_name: "E203-KWT-Accelerator"
+repository_url: "https://github.com/loverlike1216/E203-KWT-Accelerator.git"
+workspace_path: 'E:\Codex_project\E203-KWT-Accelerator'
+current_branch: "main"
+active_version: "v1"
+chat_source_name: "UNKNOWN"
+execution_policy: "one_continuous_run_with_quality_gates"
+target_days: 7
+repository_created_manually_by_user: true
+user_explicitly_approves_project_start: true
+approval_source: "Current Codex chat: initial explicit start, identity reply, and authorization to build a portable substitute environment on 2026-10-17."
+environment_profile: "local_reference"
+official_rules_pdf: "E203_KWT1_Codex_OneShot_Package/bootstrap/OFFICIAL_RULES_用户提供.pdf"
+official_e203_platform_path: null
+official_sram_mac_path: null
+official_standard_cell_liberty_path: null
+official_constraints_or_examples_path: null
+official_power_flow_path: null
+eda_tool_access_notes: "Official server pending. Local open source tools are alternative validation only."
+network_download_public_sources: true
+allow_user_scoped_dependency_install: true
+allow_system_wide_software_changes: false
+allow_paid_services_or_api: false
+allow_overwrite_other_projects: false
+allow_force_push: false
+allow_irreversible_data_delete: false
+allow_public_upload_of_official_pdk: false

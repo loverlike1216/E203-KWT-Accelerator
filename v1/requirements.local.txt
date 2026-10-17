@@ -1,0 +1,9 @@
+# Local Windows reference environment. Upstream TF 2.4.0rc1 is not claimed.
+tensorflow==2.10.1
+tensorflow-addons==0.18.0
+typeguard==2.13.3
+wrapt==1.14.1
+numpy==1.23.5
+protobuf==3.19.6
+PyYAML==6.0.3
+pypdf==6.1.1

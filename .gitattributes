@@ -1,0 +1,13 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.sv text eol=lf
+*.v text eol=lf
+*.sh text eol=lf
+*.tcl text eol=lf
+*.sdc text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.ps1 text eol=lf
+# Preserve intentional Markdown hard breaks in the observable original transcript.
+AI-interaction-memory/codex/*.md whitespace=-blank-at-eol

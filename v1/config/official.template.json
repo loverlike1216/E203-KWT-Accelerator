@@ -1,0 +1,12 @@
+{
+  "profile": "official",
+  "evidence_class": "NOT_VERIFIED",
+  "e203_source": null,
+  "model_source": "external/src/keyword-transformer",
+  "memory_binding": null,
+  "target_frequency_hz": 150000000,
+  "official_pdk": null,
+  "official_sram": null,
+  "official_constraints": null,
+  "formal_acceptance_allowed": false
+}

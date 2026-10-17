@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "name": "keyword-transformer",
+      "url": "https://github.com/ARM-software/keyword-transformer.git",
+      "commit": "237e4097afd4f6851e0b82f0a8d65c2dfe8eae30",
+      "license_files": {
+        "LICENSE.txt": "5ad8c213095c573921d7388edf93f6a9f54490b8ebf3b165ae8ef1947cf70846"
+      },
+      "is_official_platform": false,
+      "status": "DOWNLOADED_VERIFIED"
+    },
+    {
+      "name": "e203_hbirdv2",
+      "url": "https://github.com/riscv-mcu/e203_hbirdv2.git",
+      "commit": "9f3e34f337f5d0a1236a285871ffa2032491617a",
+      "license_files": {
+        "LICENSE": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+      },
+      "is_official_platform": false,
+      "status": "DOWNLOADED_VERIFIED"
+    }
+  ]
+}
