@@ -86,7 +86,10 @@ def main():
         errors = np.sqrt(m["error_sum"]/m["elements"]) / np.maximum(np.sqrt(m["reference_sum"]/m["elements"]), 1e-8)
         results[str(bits)] = {"layer_nrmse": errors.tolist(), "max_layer_nrmse": float(errors.max()),
             "max_task_nrmse": m["max_task_nrmse"].tolist(), "input_saturations": m["input_saturations"].tolist(),
-            "total_output_elements": int(m["elements"].sum()), "status": "PASS" if errors.max() <= 0.03 else "FAIL"}
+            "total_output_elements": int(m["elements"].sum()),
+            "aggregate_status": "PASS" if errors.max() <= 0.03 else "FAIL",
+            "per_task_screen_status": "PASS" if m["max_task_nrmse"].max() <= 0.03 else "FAIL",
+            "status": "PASS" if errors.max() <= 0.03 and m["max_task_nrmse"].max() <= 0.03 else "FAIL"}
     # Candidate selection uses the declared conservative INT16 baseline, not a test set.
     if results["16"]["status"] != "PASS" or max(t["nrmse"] for t in tasks) > 0.03:
         raise RuntimeError("INT16 validation did not meet 3%; numeric contract not locked")

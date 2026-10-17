@@ -1,0 +1,105 @@
+{
+  "format": "signed16_x_signed16_bias48_acc48",
+  "rounding": "nearest_ties_to_even",
+  "input_encoding": "signed_saturating",
+  "output_encoding": "signed48_exact_accumulator_no_requantization",
+  "layers": [
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    },
+    {
+      "input_scale": 0.000244140625,
+      "weight_scale": 1.52587890625e-05,
+      "input_bits": 16,
+      "weight_bits": 16,
+      "bias_bits": 48,
+      "accumulator_bits": 48
+    }
+  ],
+  "calibration_manifest_sha256": "83cf9a378985c8b53c7401c23564c997a3d5e04c5c8221ac7370be8619392ab9"
+}

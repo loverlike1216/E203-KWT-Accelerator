@@ -1,7 +1,7 @@
 # Project state
 
-Stage 1 — local numeric baseline
+Stage 2 — portable RTL baseline
 
-Next: Finish training-only calibration and separate speech validation, then implement full-matrix RTL
+Next: Implement four-lane matrix core and synchronous memory wrappers, then test twelve actual layer tasks
 
 Canonical machine state: PROJECT_STATE.json.
