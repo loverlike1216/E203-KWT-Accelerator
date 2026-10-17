@@ -1,7 +1,7 @@
 # Project state
 
-Stage 2 — portable RTL baseline
+Stage 3 — reference E203 integration
 
-Next: Implement four-lane matrix core and synchronous memory wrappers, then test twelve actual layer tasks
+Next: Complete genuine E203 C driver simulation, then clean replay and official migration handoff
 
 Canonical machine state: PROJECT_STATE.json.

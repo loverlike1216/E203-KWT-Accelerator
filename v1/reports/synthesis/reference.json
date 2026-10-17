@@ -1,0 +1,267 @@
+{
+  "status": "PASS",
+  "evidence_class": "ALTERNATIVE_VALIDATION",
+  "core_rtl_sha256": "4f7b57e0c9456f0da3b4afa8ae39b85b40f78f0511e2bcb113abdcd6c8bf01ae",
+  "mapped_netlist_sha256": "2858c90f917016a60d85cbf3fbdc4bc5da886e61f1fbc872c22dccb0d0c6c36f",
+  "mapped_netlist_path": "work/synthesis/linear_engine_netlist.v",
+  "core_synthesis": {
+    "command": [
+      "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\yosys.EXE",
+      "-s",
+      "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis\\core.ys"
+    ],
+    "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+    "started_at": "2026-10-17T20:07:39.889952+00:00",
+    "returncode": 0,
+    "elapsed_seconds": 1.797000000020489,
+    "log": "work\\logs\\synth_core.log",
+    "log_sha256": "e45cc034e3fb106e9acca6fe095c03b68747f0e9bc400e61adc2d6436327d763"
+  },
+  "gate_compile": {
+    "command": [
+      "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\iverilog.EXE",
+      "-g2012",
+      "-s",
+      "tb_core_edges",
+      "-o",
+      "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis\\gate_edges.vvp",
+      "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis\\linear_engine_netlist.v",
+      "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\tb\\tb_core_edges.sv"
+    ],
+    "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+    "started_at": "2026-10-17T20:07:41.695778+00:00",
+    "returncode": 0,
+    "elapsed_seconds": 0.39100000000325963,
+    "log": "work\\logs\\gate_edges_compile.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "gate_edges": {
+    "command": [
+      "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\vvp.EXE",
+      "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis\\gate_edges.vvp"
+    ],
+    "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis",
+    "started_at": "2026-10-17T20:07:42.093194+00:00",
+    "returncode": 0,
+    "elapsed_seconds": 0.21899999998277053,
+    "log": "work\\logs\\gate_edges.log",
+    "log_sha256": "4641fc323f712ca6e6550d2e062bd050dbcfa14c1b7981dabb5f2d32b4bc0ab8"
+  },
+  "wrapper_memory_inference": {
+    "command": [
+      "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\yosys.EXE",
+      "-s",
+      "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis\\wrapper.ys"
+    ],
+    "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+    "started_at": "2026-10-17T20:07:42.315072+00:00",
+    "returncode": 0,
+    "elapsed_seconds": 0.14100000000325963,
+    "log": "work\\logs\\synth_wrapper.log",
+    "log_sha256": "11e296cbd8371dced6db5be57f939faf879569d74c594c43f8d311a8a9934c47"
+  },
+  "core_statistics": {
+    "creator": "Yosys 0.70+157 (git sha1 af9f71e51, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+    "invocation": "stat -json ",
+    "modules": {
+      "\\linear_engine": {
+        "num_wires": 11345,
+        "num_wire_bits": 18520,
+        "num_pub_wires": 52,
+        "num_pub_wire_bits": 1575,
+        "num_ports": 24,
+        "num_port_bits": 588,
+        "num_memories": 0,
+        "num_memory_bits": 0,
+        "num_processes": 0,
+        "num_cells": 11855,
+        "num_submodules": 0,
+        "num_cells_by_type": {
+          "$_ANDNOT_": 299,
+          "$_AND_": 1681,
+          "$_DFFE_PN0P_": 276,
+          "$_DFF_PN0_": 3,
+          "$_MUX_": 252,
+          "$_NAND_": 5163,
+          "$_NOR_": 63,
+          "$_NOT_": 64,
+          "$_ORNOT_": 154,
+          "$_OR_": 399,
+          "$_XNOR_": 458,
+          "$_XOR_": 3043
+        }
+      }
+    },
+    "design": {
+      "num_wires": 11345,
+      "num_wire_bits": 18520,
+      "num_pub_wires": 52,
+      "num_pub_wire_bits": 1575,
+      "num_ports": 24,
+      "num_port_bits": 588,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 11855,
+      "num_submodules": 0,
+      "num_cells_by_type": {
+        "$_ANDNOT_": 299,
+        "$_AND_": 1681,
+        "$_DFFE_PN0P_": 276,
+        "$_DFF_PN0_": 3,
+        "$_MUX_": 252,
+        "$_NAND_": 5163,
+        "$_NOR_": 63,
+        "$_NOT_": 64,
+        "$_ORNOT_": 154,
+        "$_OR_": 399,
+        "$_XNOR_": 458,
+        "$_XOR_": 3043
+      }
+    }
+  },
+  "wrapper_statistics": {
+    "creator": "Yosys 0.70+157 (git sha1 af9f71e51, Release, GNU /usr/bin/x86_64-w64-mingw32-g++ 15.2.1)",
+    "invocation": "stat -json ",
+    "modules": {
+      "$paramod\\sram16_reference\\AW=s32'00000000000000000000000000000111": {
+        "num_wires": 12,
+        "num_wire_bits": 120,
+        "num_pub_wires": 6,
+        "num_pub_wire_bits": 42,
+        "num_ports": 6,
+        "num_port_bits": 42,
+        "num_memories": 0,
+        "num_memory_bits": 0,
+        "num_processes": 0,
+        "num_cells": 7,
+        "num_submodules": 0,
+        "num_cells_by_type": {
+          "$mem_v2": 1,
+          "$mux": 6
+        }
+      },
+      "$paramod\\sram16_reference\\AW=s32'00000000000000000000000000001100": {
+        "num_wires": 12,
+        "num_wire_bits": 135,
+        "num_pub_wires": 6,
+        "num_pub_wire_bits": 47,
+        "num_ports": 6,
+        "num_port_bits": 47,
+        "num_memories": 0,
+        "num_memory_bits": 0,
+        "num_processes": 0,
+        "num_cells": 7,
+        "num_submodules": 0,
+        "num_cells_by_type": {
+          "$mem_v2": 1,
+          "$mux": 6
+        }
+      },
+      "\\linear_mmio": {
+        "num_wires": 305,
+        "num_wire_bits": 1833,
+        "num_pub_wires": 93,
+        "num_pub_wire_bits": 1040,
+        "num_ports": 19,
+        "num_port_bits": 370,
+        "num_memories": 0,
+        "num_memory_bits": 0,
+        "num_processes": 0,
+        "num_cells": 246,
+        "num_submodules": 19,
+        "num_cells_by_type": {
+          "$add": 4,
+          "$adff": 4,
+          "$adffe": 10,
+          "$eq": 18,
+          "$logic_and": 49,
+          "$logic_not": 13,
+          "$logic_or": 28,
+          "$lt": 4,
+          "$mux": 91,
+          "$ne": 8,
+          "$not": 3,
+          "$pmux": 1,
+          "$reduce_and": 5,
+          "$reduce_bool": 7,
+          "$reduce_or": 1,
+          "$paramod\\sram16_reference\\AW=s32'00000000000000000000000000000111": 12,
+          "$paramod\\sram16_reference\\AW=s32'00000000000000000000000000001100": 6,
+          "linear_engine": 1
+        }
+      },
+      "\\linear_engine": {
+        "num_wires": 177,
+        "num_wire_bits": 3073,
+        "num_pub_wires": 53,
+        "num_pub_wire_bits": 1577,
+        "num_ports": 24,
+        "num_port_bits": 588,
+        "num_memories": 0,
+        "num_memory_bits": 0,
+        "num_processes": 0,
+        "num_cells": 159,
+        "num_submodules": 0,
+        "num_cells_by_type": {
+          "$add": 12,
+          "$adffe": 13,
+          "$eq": 6,
+          "$logic_and": 7,
+          "$logic_not": 2,
+          "$logic_or": 1,
+          "$mul": 4,
+          "$mux": 75,
+          "$ne": 16,
+          "$pmux": 4,
+          "$reduce_and": 8,
+          "$reduce_bool": 10,
+          "$reduce_or": 1
+        }
+      }
+    },
+    "design": {
+      "num_wires": 698,
+      "num_wire_bits": 7156,
+      "num_pub_wires": 254,
+      "num_pub_wire_bits": 3403,
+      "num_ports": 151,
+      "num_port_bits": 1744,
+      "num_memories": 0,
+      "num_memory_bits": 0,
+      "num_processes": 0,
+      "num_cells": 531,
+      "num_submodules": 19,
+      "num_cells_by_type": {
+        "$add": 16,
+        "$adff": 4,
+        "$adffe": 23,
+        "$eq": 24,
+        "$logic_and": 56,
+        "$logic_not": 15,
+        "$logic_or": 29,
+        "$lt": 4,
+        "$mem_v2": 18,
+        "$mul": 4,
+        "$mux": 274,
+        "$ne": 24,
+        "$not": 3,
+        "$pmux": 5,
+        "$reduce_and": 13,
+        "$reduce_bool": 17,
+        "$reduce_or": 2,
+        "$paramod\\sram16_reference\\AW=s32'00000000000000000000000000000111": 12,
+        "$paramod\\sram16_reference\\AW=s32'00000000000000000000000000001100": 6,
+        "linear_engine": 1
+      }
+    }
+  },
+  "official_sta": "NOT_VERIFIED",
+  "official_area_mm2": null,
+  "official_power_watts": null,
+  "limits": [
+    "Generic logic mapping, not official standard cells.",
+    "Reference SRAM memories remain inferred, not official macros.",
+    "Post-synthesis boundary tests only; full-matrix post-synthesis equivalence remains open."
+  ]
+}

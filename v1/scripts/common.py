@@ -33,6 +33,10 @@ def tool_env():
     dirs = [suite / "bin", suite / "lib"]
     env["PATH"] = os.pathsep.join(str(p) for p in dirs if p.exists()) + os.pathsep + env.get("PATH", "")
     env["PYTHONIOENCODING"] = "utf-8"
+    scratch = WORK / "tmp"
+    scratch.mkdir(parents=True, exist_ok=True)
+    for name in ("TMP", "TEMP", "TMPDIR"):
+        env[name] = str(scratch)
     return env
 
 

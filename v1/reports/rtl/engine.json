@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "evidence_class": "ALTERNATIVE_VALIDATION",
+  "rtl_sha256": {
+    "linear_engine.sv": "4f7b57e0c9456f0da3b4afa8ae39b85b40f78f0511e2bcb113abdcd6c8bf01ae",
+    "sram16_reference.sv": "373ff570a3bdbdfccfb7620e9e9e336bbfad93e003a8d5741183707824f382a3",
+    "linear_mmio.sv": "93d364e83fa085339a1aa3d04229e01a2bfc0e10a227ad04b6c4196ea3b6c6ee"
+  },
+  "numeric_config_sha256": "d9f49a925b8866199b0409538afed550487b1d22e4fd8836ef1ec95aa2881666",
+  "checks": {
+    "tb_core_edges": {
+      "status": "PASS",
+      "compile": {
+        "command": [
+          "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\iverilog.EXE",
+          "-g2012",
+          "-Wall",
+          "-s",
+          "tb_core_edges",
+          "-o",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\work\\engine\\tb_core_edges.vvp",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\rtl\\linear_engine.sv",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\rtl\\sram16_reference.sv",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\rtl\\linear_mmio.sv",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\tb\\tb_core_edges.sv"
+        ],
+        "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+        "started_at": "2026-10-17T20:03:52.615164+00:00",
+        "returncode": 0,
+        "elapsed_seconds": 0.13999999995576218,
+        "log": "work\\logs\\tb_core_edges_compile.log",
+        "log_sha256": "dc6e65997ae3b3693f023c8aaf0b6142632b7261d6a33df91b98fee379ff57c8"
+      },
+      "run": {
+        "command": [
+          "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\vvp.EXE",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\work\\engine\\tb_core_edges.vvp",
+          "+VECTORS=E:/Codex_project/E203-KWT-Accelerator/work/vectors"
+        ],
+        "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\engine",
+        "started_at": "2026-10-17T20:03:52.750540+00:00",
+        "returncode": 0,
+        "elapsed_seconds": 0.03200000000651926,
+        "log": "work\\logs\\tb_core_edges.log",
+        "log_sha256": "4641fc323f712ca6e6550d2e062bd050dbcfa14c1b7981dabb5f2d32b4bc0ab8"
+      }
+    },
+    "tb_engine": {
+      "status": "PASS",
+      "compile": {
+        "command": [
+          "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\iverilog.EXE",
+          "-g2012",
+          "-Wall",
+          "-s",
+          "tb_engine",
+          "-o",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\work\\engine\\tb_engine.vvp",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\rtl\\linear_engine.sv",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\rtl\\sram16_reference.sv",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\rtl\\linear_mmio.sv",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\tb\\tb_engine.sv"
+        ],
+        "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
+        "started_at": "2026-10-17T20:03:52.788071+00:00",
+        "returncode": 0,
+        "elapsed_seconds": 0.09299999999348074,
+        "log": "work\\logs\\tb_engine_compile.log",
+        "log_sha256": "dc6e65997ae3b3693f023c8aaf0b6142632b7261d6a33df91b98fee379ff57c8"
+      },
+      "run": {
+        "command": [
+          "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\vvp.EXE",
+          "E:\\Codex_project\\E203-KWT-Accelerator\\work\\engine\\tb_engine.vvp",
+          "+VECTORS=E:/Codex_project/E203-KWT-Accelerator/work/vectors"
+        ],
+        "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\engine",
+        "started_at": "2026-10-17T20:03:52.880299+00:00",
+        "returncode": 0,
+        "elapsed_seconds": 140.1720000000205,
+        "log": "work\\logs\\tb_engine.log",
+        "log_sha256": "0bd63f1ceeceb20f1decc766c2e0177030e578eff1af6e67ae50dc6b53c918b5"
+      }
+    },
+    "layers": [
+      {
+        "layer": 1,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818612
+      },
+      {
+        "layer": 2,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818610
+      },
+      {
+        "layer": 3,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818611
+      },
+      {
+        "layer": 4,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818611
+      },
+      {
+        "layer": 5,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818612
+      },
+      {
+        "layer": 6,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818610
+      },
+      {
+        "layer": 7,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818612
+      },
+      {
+        "layer": 8,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818612
+      },
+      {
+        "layer": 9,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818610
+      },
+      {
+        "layer": 10,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818611
+      },
+      {
+        "layer": 11,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818611
+      },
+      {
+        "layer": 12,
+        "outputs": 25344,
+        "macs": 1622016,
+        "compute_cycles": 818612
+      }
+    ]
+  },
+  "bit_exact_outputs": 304128,
+  "cold_clear": "all reference SRAM banks physically zeroed before complete sequential reload",
+  "formal_timing_area_power": "NOT_VERIFIED",
+  "sram_binding": "synchronous reference, not official macros"
+}
