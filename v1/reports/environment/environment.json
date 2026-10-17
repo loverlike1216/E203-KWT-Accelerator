@@ -8,6 +8,9 @@
   "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
   "platform": "Windows-10-10.0.26200-SP0",
   "tensorflow": "2.10.1",
+  "python_executable_sha256": "b2c836c52cdf063180b9ee76f67ac42946101b79ac457f3494035a67c090d961",
+  "requirements_lock_sha256": "d7a922fa877db3cc6c1471d91526478cd7d32de81730b6d2499e0e77b9ab0c67",
+  "sources_lock_sha256": "85ed2eaf9ed25dcd44ca663ad7f1f8d5f4bc7f085a98fb06d72ba64d67ebca40",
   "numpy": "1.23.5",
   "tools": {
     "iverilog": {
@@ -18,10 +21,10 @@
         "-V"
       ],
       "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
-      "started_at": "2026-10-17T19:58:48.752650+00:00",
+      "started_at": "2026-10-17T20:27:18.547690+00:00",
       "returncode": 0,
-      "elapsed_seconds": 0.1720000000204891,
-      "log": "work\\logs\\version_iverilog.log",
+      "elapsed_seconds": 0.125,
+      "log": "work\\logs\\version_iverilog-20261017-202718-547690-142124.log",
       "log_sha256": "288216f16f99cc9931d5f991547bd9f8f30646eb0ca3b053986c66b80b934d43"
     },
     "yosys": {
@@ -32,10 +35,10 @@
         "-V"
       ],
       "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
-      "started_at": "2026-10-17T19:58:48.926544+00:00",
+      "started_at": "2026-10-17T20:27:18.673645+00:00",
       "returncode": 0,
-      "elapsed_seconds": 0.06300000002374873,
-      "log": "work\\logs\\version_yosys.log",
+      "elapsed_seconds": 0.0470000000204891,
+      "log": "work\\logs\\version_yosys-20261017-202718-673645-142124.log",
       "log_sha256": "acb37350ab14f74231045cd87964ab3e326e10b979a51cb903de684090079151"
     },
     "git": {
@@ -46,23 +49,24 @@
         "--version"
       ],
       "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
-      "started_at": "2026-10-17T19:58:49.038819+00:00",
+      "started_at": "2026-10-17T20:27:18.766839+00:00",
       "returncode": 0,
-      "elapsed_seconds": 0.0470000000204891,
-      "log": "work\\logs\\version_git.log",
-      "log_sha256": "a7d641f98c0153e5a737d61cbe785ffa45086dce3d6708fd8bb679e7de3bdd81"
+      "elapsed_seconds": 0.046999999962281436,
+      "log": "work\\logs\\version_git-20261017-202718-766839-142124.log",
+      "log_sha256": "72dc60e11b0dfa68bc7b055fc909e74ec8634b2caebfe31538631cefc442c46c"
     },
     "riscv_gcc": {
       "version": "riscv-none-elf-gcc.exe (xPack GNU RISC-V Embedded GCC x86_64) 15.2.0",
+      "executable_sha256": "9fd3aecdd6ae127a5545709f44f8f154b4a39898b021fe87d2991947b0a235c5",
       "command": [
         "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\xpack-riscv-none-elf-gcc-15.2.0-1\\bin\\riscv-none-elf-gcc.exe",
         "--version"
       ],
       "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
-      "started_at": "2026-10-17T19:58:49.103459+00:00",
+      "started_at": "2026-10-17T20:27:18.835323+00:00",
       "returncode": 0,
-      "elapsed_seconds": 0.030999999959021807,
-      "log": "work\\logs\\version_riscv_gcc.log",
+      "elapsed_seconds": 0.03200000000651926,
+      "log": "work\\logs\\version_riscv_gcc-20261017-202718-835323-142124.log",
       "log_sha256": "56e9ba794dc0f3d4846eef892db8f5528046f8dfb5dbec6d5f63ddf06d5fea40"
     }
   },

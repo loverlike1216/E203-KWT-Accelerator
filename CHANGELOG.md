@@ -16,8 +16,12 @@
   matrices, all output bits, signed boundaries/reset/error/backpressure.
 - Passed generic core synthesis and mapped boundary simulation. Optional bounded
   SAT equivalence timed out and remains UNVERIFIED.
-- Implemented genuine E203 reference bus/shared-SRAM integration, C driver and
-  all-result CPU readback; integration test is ongoing until actual reports exist.
+- Passed genuine E203 reference C driver/hardware/readback tasks for layers 1 and
+  12, all 25,344 outputs each. Every task issued 770,030 CPU instructions, performed
+  62,560 shared reads and 1,622,016 hardware MACs. Initial harness time-unit failures
+  were diagnosed, retained and fixed without modifying upstream source.
+- Clean checkout / second venv reproduced 48 vector files byte for byte and all
+  304,128 RTL output comparisons. Official/Linux replay remains unverified.
 - Added reproducible entry points, official-flow guards, migration map, evidence
   boundaries, interaction audit and recoverable checkpoints. Official acceptance
   remains REVISE until official platform/STA/area/power gates are closed.

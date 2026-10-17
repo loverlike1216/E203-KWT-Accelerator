@@ -13,13 +13,13 @@ physical page numbers below include the cover. Bootstrap 02/04 add execution gat
 | Q05 | p8 twelve layer parameter replacement | sim_engine.py | 12 physically cleared/reloaded tasks, 304,128 checked outputs PASS |
 | Q06 | p11 max per-layer aggregate NRMSE <=3%; p12 each performance task <=3% | quant_check.py / integer_reference.py | 89 train /45 validation, INT16 max aggregate 0.01030%, local PASS; official 600 and performance selections NOT_VERIFIED |
 | Q07 | p11 RTL/model raw bits equal | full tb_engine and integer vectors | 304,128 exact signed48 comparisons PASS |
-| Q08 | p8 E203 real driver and exchange | reference_soc.sv, driver.c, sim_accelerator_soc.py | local reference integration execution status in soc reports; official platform BLOCKED |
+| Q08 | p8 E203 real driver and exchange | reference_soc.sv, driver.c, sim_accelerator_soc.py | layers 1/12 reference CPU/hardware/readback PASS, 25,344 outputs each; official platform and full CPU twelve-task regression open |
 | Q09 | p12 synthesis/constraint/function consistency | synth_reference.py, optional equiv_reference.py | generic mapped boundary simulation PASS; bounded formal attempt UNVERIFIED; full official netlist equivalence BLOCKED |
 | Q10 | p4/p12 150 MHz | candidate clock SDC | no false/multicycle paths; official STA BLOCKED, not inferred from simulation period |
 | Q11 | p13 <=2.25 mm2 core/interface/internal macros | 6x16x4096 +12x16x128 reference bank geometry | capacity 52,224 bytes, 18 inferred memories; official area BLOCKED |
 | Q12 | p12 complete E203/engine/interconnect/SRAM activity power | debug VCD only at present | formal representative activity mapping and SRAM/standard-cell power BLOCKED |
 | Q13 | p12 cold task load through final writeback, schedule/waits included | reference SoC cycle counters | local first CPU source read to serialized writeback only; external preload not timed; official throughput/energy NOT_VERIFIED |
-| Q14 | p14 clean repeat / versions/hashes | bootstrap, source lock, run.py, clean replay | local replay under verification; Linux/official clean replay pending |
+| Q14 | p14 clean repeat / versions/hashes | bootstrap, source lock, run.py, clean replay | new checkout + second venv model/quant/12-layer RTL/synthesis PASS; 48 file hashes identical; Linux/official replay pending |
 | Q15 | p13 same-condition innovation and ablation | baseline preserved; memory/scheduling research deferred | OPTIONAL, no novelty/energy/performance improvement claim |
 
 Additional invariants: p4 no external DDR, shared SRAM 512 KiB; p5 no training,

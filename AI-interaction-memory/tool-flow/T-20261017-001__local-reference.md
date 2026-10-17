@@ -20,3 +20,15 @@ Evidence: v1/reports and work/logs. Each command metadata includes command, retu
 code, elapsed time and log hash. Initial failures are retained under distinct names.
 No official server, private library, license secret or external AI chat was accessed.
 Decision impact: local reference development only, authorized by the user.
+
+Completed local verification additions:
+- Real dataset 89 training calibration /45 validation, INT16 aggregate max 0.01030%.
+- Twelve full accelerator tasks, 304,128 output comparisons, physical SRAM clearing.
+- Generic mapped core boundary simulation PASS; 180-second SAT attempt UNVERIFIED.
+- Initial E203 integration PC-stuck evidence -> timescale RCA -> unchanged-source
+  time-unit prefix -> ISA re-regression and actual CPU driver tasks 1/12 PASS.
+- Each CPU task issued 770,030 instructions, read 62,560 shared words, executed
+  1,622,016 hardware MACs and checked every output plus CPU checksum.
+- Clean source checkout and second venv reproduce all 48 vector files and twelve
+  accelerator tasks. Source/tool caches are shared and verified; no Linux claim.
+- Git checkpoints and pushes retain failure evidence and official blockers.

@@ -18,17 +18,31 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("target",choices=list(COMMANDS)+["regress","synth","sta","power","benchmark","package"])
     parser.add_argument("--layers",default="1")
-    parser.add_argument("--config",default="v1/config/official.template.json")
+    parser.add_argument("--jobs",type=int,default=1)
+    parser.add_argument("--config",default="v1/config/local_reference.json")
     args=parser.parse_args()
+    profile=json.loads((ROOT/args.config).read_text())
+    if profile.get("profile")=="official" and args.target in list(COMMANDS)+["regress"]:
+        command=profile.get("commands",{}).get(args.target)
+        missing=[name for name in ("e203_source","official_sram") if not profile.get(name)]
+        if missing or not isinstance(command,list) or not command:
+            print(json.dumps({"status":"BLOCKED","target":args.target,"missing":missing,
+                "reason":"Official profile requires a real official execution command; public reference fallback is prohibited."}))
+            raise SystemExit(2)
+        for name in ("e203_source","official_sram"):
+            if not (ROOT/profile[name]).exists(): raise FileNotFoundError(name)
+        _,metadata=run(command,"official_"+args.target,timeout=7200)
+        write_json(REPORTS/"official"/(args.target+"_execution.json"),{"status":"RAN_NEEDS_REPORT_REVIEW",**metadata})
+        return
     if args.target in COMMANDS:
         command=[sys.executable,ROOT/"v1/scripts"/COMMANDS[args.target]]
-        if args.target=="sim-soc": command += ["--layers",args.layers]
+        if args.target=="sim-soc": command += ["--layers",args.layers,"--jobs",str(args.jobs)]
         run(command,"target_"+args.target,timeout=7200)
     elif args.target=="regress":
         # Every command does real work; first failure stops the chain.
-        for target in ("env-check","model-check","quant-check","sim-reference-soc","sim-engine","synth-reference","sim-soc"):
-            command=[sys.executable,__file__,target]
-            if target=="sim-soc": command += ["--layers",args.layers]
+        for target in ("env-check","model-check","dataset-check","quant-check","sim-reference-soc","sim-engine","synth-reference","sim-soc"):
+            command=[sys.executable,__file__,target,"--config",args.config]
+            if target=="sim-soc": command += ["--layers",args.layers,"--jobs",str(args.jobs)]
             subprocess.run(command,cwd=ROOT,check=True)
     elif args.target=="package":
         import zipfile

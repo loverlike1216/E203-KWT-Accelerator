@@ -1,7 +1,7 @@
 # Project state
 
-Stage 3 — corrected reference E203 regression
+Local reference baseline verified — official migration pending
 
-Next: Finish corrected layer 1 and 12 CPU/accelerator tests and clean replay, then archive portable baseline
+Next: Audit official server/platform/macros/library/flow on receipt, port adapters and run official gates in the same v1
 
 Canonical machine state: PROJECT_STATE.json.

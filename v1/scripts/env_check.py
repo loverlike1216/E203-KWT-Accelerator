@@ -28,13 +28,16 @@ def main():
             compiler = executable("riscv64-unknown-elf-gcc")
     if compiler.exists() if hasattr(compiler, "exists") else bool(compiler):
         text, metadata = run([compiler, "--version"], "version_riscv_gcc")
-        versions["riscv_gcc"] = {"version": text.splitlines()[0], **metadata}
+        versions["riscv_gcc"] = {"version": text.splitlines()[0], "executable_sha256":sha256(compiler), **metadata}
     else:
         raise RuntimeError("RISC-V compiler installation not complete")
     write_json(REPORTS / "environment/environment.json", {
         "status": "PASS", "profile": "local_reference", "evidence_class": "ALTERNATIVE_VALIDATION",
         "project_id": config["project_id"], "repository": remote, "workspace": str(ROOT),
         "python": sys.version, "platform": platform.platform(), "tensorflow": tf.__version__,
+        "python_executable_sha256":sha256(sys.executable),
+        "requirements_lock_sha256":sha256(ROOT/"v1/requirements.local.lock.txt"),
+        "sources_lock_sha256":sha256(ROOT/"external/SOURCES.lock.json"),
         "numpy": np.__version__, "tools": versions, "official_server": "NOT_PROVIDED",
         "official_pdk": "NOT_PROVIDED", "official_power_flow": "NOT_PROVIDED"})
 

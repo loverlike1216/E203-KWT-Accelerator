@@ -8,12 +8,15 @@ Current local evidence: actual fixed checkpoint tensors restored exactly; 89
 training calibration / 45 separate validation samples; INT16 maximum per-layer
 NRMSE 0.01030%; twelve full RTL tasks / 304,128 exact output comparisons; signed
 boundaries, reset, errors and backpressure; generic logic synthesis and mapped
-core boundary simulation. Read reports for exact values and evidence scope.
+core boundary simulation; actual public E203 C driver/hardware/readback tasks for
+layers 1 and 12. Read reports for exact values and evidence scope.
 
 Formal competition verdict remains **REVISE**: official SoC, SRAM libraries,
 150 MHz STA, 2.25 mm2 area and complete activity-based power are not verified.
 The bounded optional generic SAT equivalence attempt timed out; it is not a PASS.
-The current reference SoC integration status is in `v1/reports/soc/` when executed.
+Reference CPU tasks each check all 25,344 outputs, 1,622,016 actual hardware MACs
+and the CPU's complete readback checksum. This is reference-platform evidence;
+full official SoC and twelve-task CPU regression remain open.
 
 ## Restore and reproduce
 
@@ -36,7 +39,9 @@ Existing differing/dirty source checkouts cause a failure instead of being reset
 
 `regress` runs model verification, quantization, public E203 ISA baseline, complete
 12-layer RTL, synthesis and one reference SoC task. To exercise more reference SoC
-tasks, pass `-Layers '1,2,3,4,5,6,7,8,9,10,11,12'`. CPU-level Icarus simulation is
+tasks, pass `-Layers '1,2,3,4,5,6,7,8,9,10,11,12' -Jobs 3`. Each selected task boots
+independently, with one frozen compiled image and separate process memory/logs.
+CPU-level Icarus simulation is
 substantially slower than standalone accelerator simulation. Logs are in `work/logs/`.
 Each command returns the real failing exit code and stops on failure.
 

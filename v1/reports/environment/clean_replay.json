@@ -1,0 +1,254 @@
+{
+  "status": "PASS",
+  "evidence_class": "ALTERNATIVE_VALIDATION",
+  "source_commit": "dbe325ab4b2e06774000a7ffd86f073e95fcda32",
+  "second_python_environment": true,
+  "same_pinned_python_packages": true,
+  "same_quantized_raw_output_hash": "1fed332ce8df0cb16e787ff8c38fb0cb2f36679cc828034d7785d65b906aa40e",
+  "identical_vector_files": [
+    {
+      "layer": 1,
+      "file": "x",
+      "sha256": "2ca3d3ccb75e1a21ab808f0668e4ed3957a0fc1f95c9fc6f6b8a66f4189730ec"
+    },
+    {
+      "layer": 1,
+      "file": "w",
+      "sha256": "984b8566ffd1b21c1dd70bfe0e8293abf88c332d70f6b0caebdc348d62992be5"
+    },
+    {
+      "layer": 1,
+      "file": "b",
+      "sha256": "102604516ce0dfc629f8cff794c86754f048b5828fbbbb740413bf3cf58878d7"
+    },
+    {
+      "layer": 1,
+      "file": "y",
+      "sha256": "2f64314f29b4f5e3bd9fd70287dc028418050296fd8adca2cd4ccfd317958cfd"
+    },
+    {
+      "layer": 2,
+      "file": "x",
+      "sha256": "470c38fdd60c5be8572e725b0cb047a285bcd98b695c0ecc2803b37e4b50c6b1"
+    },
+    {
+      "layer": 2,
+      "file": "w",
+      "sha256": "4ee655c8b5d3e86ea025347f8fd4308a9d8e7bb6270ae52644fd3d4b6edd62d7"
+    },
+    {
+      "layer": 2,
+      "file": "b",
+      "sha256": "104a799565852603e04055c8edc8c0879e9b23648c0b6a2a00fc8b200b7e0f9b"
+    },
+    {
+      "layer": 2,
+      "file": "y",
+      "sha256": "28dd7c36dc1ce7a7295d8c82af7ef5a83c4274771e8c828284f119ac358c41f0"
+    },
+    {
+      "layer": 3,
+      "file": "x",
+      "sha256": "17bfe0fdb38574dc8c34bba73cdf17202acb8df1830172b878c8c56dde45b548"
+    },
+    {
+      "layer": 3,
+      "file": "w",
+      "sha256": "6147350d7d46f0f2863606bbb98106501caaa6e493be70ae2fc71b73aa8820d8"
+    },
+    {
+      "layer": 3,
+      "file": "b",
+      "sha256": "391d8c05f62a95b3a332b834623570e5beded8db23a7918ee51f107c08f8e4c6"
+    },
+    {
+      "layer": 3,
+      "file": "y",
+      "sha256": "860f3ceb40b3c9e120d5830a95dcabe6240b29bff8512d211760b874c4ec5ae8"
+    },
+    {
+      "layer": 4,
+      "file": "x",
+      "sha256": "908f1c45d16df0bfd1fb5a68aa9c03eda291d79b3f53fed51e8243ad22430638"
+    },
+    {
+      "layer": 4,
+      "file": "w",
+      "sha256": "b5b6b8998a1b29d4eb4fc38d63fd02606a95d2506962186c45fdcd0c1eb74cd3"
+    },
+    {
+      "layer": 4,
+      "file": "b",
+      "sha256": "036ca1881a0896b7ff518edf26d4ec21846705cbeb6af3f45ca361f34772a5ad"
+    },
+    {
+      "layer": 4,
+      "file": "y",
+      "sha256": "62f5b835750929209d818c1d1fd482a5cd81c940f9dab52d7bcca9004969e879"
+    },
+    {
+      "layer": 5,
+      "file": "x",
+      "sha256": "ea09fdc201a11e119ae45b91a8a3730923acad69e7275ed6c3c3184873cbbb57"
+    },
+    {
+      "layer": 5,
+      "file": "w",
+      "sha256": "c8ebef0acbbda1b9710e044a371b9f83bd23bfa0f16b06eedc241dbf8116aeea"
+    },
+    {
+      "layer": 5,
+      "file": "b",
+      "sha256": "e32b29dace9a1287561a16dedc1c7b2451141bc041eb48b25ebb03545e89dddd"
+    },
+    {
+      "layer": 5,
+      "file": "y",
+      "sha256": "5c92b0482b191c0fe0d184c524f528388bce7ac9445f3b08f41bc6475377c1c7"
+    },
+    {
+      "layer": 6,
+      "file": "x",
+      "sha256": "f060e45ee3bda710943730fc854766572dab074c5bb3a6a91ed3d2219b4dc2a6"
+    },
+    {
+      "layer": 6,
+      "file": "w",
+      "sha256": "c2822b7c0c12d9412e5a09e960820e442489d1a38cd43ec982481dd8e4f45604"
+    },
+    {
+      "layer": 6,
+      "file": "b",
+      "sha256": "677013572d2f5d30a7f8fb028170197944083040bb1991b5dfdfd39cfc7a397f"
+    },
+    {
+      "layer": 6,
+      "file": "y",
+      "sha256": "b48462a7c307caf466cd2b188b3133b006458d3a2e9a1f8db5adb425bda65ea7"
+    },
+    {
+      "layer": 7,
+      "file": "x",
+      "sha256": "67a185ba2016079d955637ac4a20ddd2f22381a88e4cf20a06790d1fa20176ae"
+    },
+    {
+      "layer": 7,
+      "file": "w",
+      "sha256": "7ab4f850702d4e1132537414e451849a7beb18388e2ccfbb13e1866326a3679b"
+    },
+    {
+      "layer": 7,
+      "file": "b",
+      "sha256": "19a0a3ac7c828e0ab1766111ee68d5c9b7d14c2f92b3ef548f133a7afab0adfb"
+    },
+    {
+      "layer": 7,
+      "file": "y",
+      "sha256": "6f95e4050c8e2066ff672aa6d9afc6ff0473d305496b69f7b0399344214e8828"
+    },
+    {
+      "layer": 8,
+      "file": "x",
+      "sha256": "b199f6125e5d6327b30f3c3af6d2cf6aff867d6a356d2c708d457470a3594150"
+    },
+    {
+      "layer": 8,
+      "file": "w",
+      "sha256": "93fd22344711f97a45632cf4fac4138a5f3361653835f450451bab7d418197c7"
+    },
+    {
+      "layer": 8,
+      "file": "b",
+      "sha256": "6f3021598c60acc4df834886f322e7c08c2d666b89942132b7c3eaeb2fa50d62"
+    },
+    {
+      "layer": 8,
+      "file": "y",
+      "sha256": "04071b2eaae18f31ba605d1630e7a508fd54096eaed9b37f2d6382e0ccb69048"
+    },
+    {
+      "layer": 9,
+      "file": "x",
+      "sha256": "736645ac192a71dbf12abcde48ed48a9b62f1b3eb94be8b659b07d70890edf3a"
+    },
+    {
+      "layer": 9,
+      "file": "w",
+      "sha256": "848eb95afb63b901687d1eefd9c1476ff0a8c761aba2a025dc51f580ca4fdef9"
+    },
+    {
+      "layer": 9,
+      "file": "b",
+      "sha256": "374dd3df235093bc01883080de106f9150bc6a2f304f19f3db086bdb1ea99c66"
+    },
+    {
+      "layer": 9,
+      "file": "y",
+      "sha256": "55ace7ba89786c1cd543a01ab99a006183b90dbd27a74f3c09ba96ac1edc8ea9"
+    },
+    {
+      "layer": 10,
+      "file": "x",
+      "sha256": "84ab5023b0f278ec14bf5a6aff71822c7b50f7acf88a8be8f0d03bc1c8cd361c"
+    },
+    {
+      "layer": 10,
+      "file": "w",
+      "sha256": "7082835d46d1cb4bc838e56a5e45b2bed00a2e8cd00e9942f49ec915440a9be6"
+    },
+    {
+      "layer": 10,
+      "file": "b",
+      "sha256": "8ea2313db59d8b6d7deea9eef80f3bcb4c31a027cff4b30693d8c780ade301fb"
+    },
+    {
+      "layer": 10,
+      "file": "y",
+      "sha256": "06fe32efd5b9e8eb84d9629b1d9293e800727ea05c12979bcfa75eb41568127c"
+    },
+    {
+      "layer": 11,
+      "file": "x",
+      "sha256": "55071b1ac9903117eb4889578e699278248726b4c15a3df12d10aeefd64f7243"
+    },
+    {
+      "layer": 11,
+      "file": "w",
+      "sha256": "d6821004a67e1a1a058551a1b8c0207fd7bfeafc314abcfa5e57745dea0d82af"
+    },
+    {
+      "layer": 11,
+      "file": "b",
+      "sha256": "88dc358a55e7ecbd49e00d1e55b160db1d9d78ed284603d7fef91b48fbb363af"
+    },
+    {
+      "layer": 11,
+      "file": "y",
+      "sha256": "bdec57137ccbc77f82478d7a07e61ba160636b5ce75aa53f45dcf965afe2797b"
+    },
+    {
+      "layer": 12,
+      "file": "x",
+      "sha256": "8bd87cecdd3bd884a18a103c5ced9d532491d679be3ddf8c8ead7a6c6ba45c44"
+    },
+    {
+      "layer": 12,
+      "file": "w",
+      "sha256": "2f21083473938dbf873ca5294afdbfa55fb49cdcf06625f54a0874ac361dc701"
+    },
+    {
+      "layer": 12,
+      "file": "b",
+      "sha256": "67b81744553ca6320f7650c852c9e88818975ebbd59bb78267318cb1297605f2"
+    },
+    {
+      "layer": 12,
+      "file": "y",
+      "sha256": "fc04c28a64b144b25657f41c910bd70aa892d16dada67583a387ee49f99fd854"
+    }
+  ],
+  "rtl_bit_exact_outputs": 304128,
+  "clone_rtl_report_sha256": "14c8ff2e5b66413abf14f42aa19fef726842f1f01d56d4154a3473076abb694d",
+  "scope": "Clean source checkout and new venv: env/model/dataset/quant/full twelve-layer RTL/generic synthesis replay. Verified public source and tool caches reused via workspace junctions. Not a second OS or official server.",
+  "official_soc_clean_replay": "NOT_VERIFIED"
+}

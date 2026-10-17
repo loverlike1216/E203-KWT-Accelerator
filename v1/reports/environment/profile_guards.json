@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "evidence_class": "ALTERNATIVE_VALIDATION",
+  "scope": "Actual pwsh entrypoint negative tests in current session",
+  "tests": [
+    {
+      "command": [
+        "pwsh",
+        "-File",
+        "run.ps1",
+        "sim-soc",
+        "-Config",
+        "v1/config/official.template.json"
+      ],
+      "actual_target_exit_code": 2,
+      "expected_status": "BLOCKED",
+      "public_reference_fallback": false
+    },
+    {
+      "command": [
+        "pwsh",
+        "-File",
+        "run.ps1",
+        "sta"
+      ],
+      "actual_target_exit_code": 2,
+      "expected_status": "BLOCKED"
+    }
+  ],
+  "run_script_sha256": "ca8ca249c511ee09c34fe59a32eb3d77ef91fde22fc28395bb60f48dac6bef3e",
+  "dispatcher_sha256": "c46482314f8ebec0c16aa9a80b745c1702b01b227ee227874280f654fe7074ab"
+}

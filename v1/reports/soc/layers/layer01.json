@@ -1,0 +1,32 @@
+{
+  "layer": 1,
+  "status": "PASS",
+  "outputs": 25344,
+  "instructions_issued": 770030,
+  "shared_reads": 62560,
+  "accelerator_writes": 11874,
+  "result_words": 50688,
+  "macs": 1622016,
+  "cpu_load_to_writeback_cycles": 956689,
+  "total_cycles": 1319761,
+  "checksum": "4b82b25a",
+  "input_hashes": {
+    "b.hex": "102604516ce0dfc629f8cff794c86754f048b5828fbbbb740413bf3cf58878d7",
+    "w.hex": "984b8566ffd1b21c1dd70bfe0e8293abf88c332d70f6b0caebdc348d62992be5",
+    "x.hex": "2ca3d3ccb75e1a21ab808f0668e4ed3957a0fc1f95c9fc6f6b8a66f4189730ec",
+    "y.hex": "2f64314f29b4f5e3bd9fd70287dc028418050296fd8adca2cd4ccfd317958cfd"
+  },
+  "build_fingerprint": "493f43e23fcc1d16efd246ef46903e5e2978c8ac96729571769dc6b53ef3770a",
+  "command": [
+    "E:\\Codex_project\\E203-KWT-Accelerator\\toolchains\\oss-cad-suite\\bin\\vvp.EXE",
+    "E:\\Codex_project\\E203-KWT-Accelerator\\work\\accelerator_soc\\soc.vvp",
+    "+FIRMWARE=E:/Codex_project/E203-KWT-Accelerator/work/accelerator_soc/driver.hex",
+    "+TASK=E:/Codex_project/E203-KWT-Accelerator/work/vectors/layer01"
+  ],
+  "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\accelerator_soc",
+  "started_at": "2026-10-17T20:21:38.178060+00:00",
+  "returncode": 0,
+  "elapsed_seconds": 428.3280000000377,
+  "log": "work\\logs\\accelerator_soc_layer01-20261017-202138-178060-119012.log",
+  "log_sha256": "c843cc504c0ce7e23968dac343f6eb62a59f0b0050b652bf83d9b0b704562f3f"
+}

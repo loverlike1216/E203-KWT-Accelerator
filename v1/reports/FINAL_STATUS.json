@@ -1,0 +1,21 @@
+{
+  "verdict": "REVISE",
+  "local_baseline": "VERIFIED_WITH_LIMITATIONS",
+  "evidence_class": "ALTERNATIVE_VALIDATION",
+  "active_version": "v1",
+  "max_validation_layer_nrmse": 0.00010298561145988723,
+  "rtl_exact_outputs": 304128,
+  "reference_soc_layers": [
+    1,
+    12
+  ],
+  "official_timing_150mhz": "NOT_VERIFIED",
+  "official_area_mm2": null,
+  "official_power_watts": null,
+  "official_energy_j_per_task": null,
+  "official_throughput_tasks_per_second": null,
+  "official_600_samples": "NOT_VERIFIED",
+  "official_netlist_equivalence": "NOT_VERIFIED",
+  "generic_sat_equivalence": "UNVERIFIED",
+  "next_action": "Audit official server/source/macros/flow on receipt, port adapters and re-run official gates in v1."
+}

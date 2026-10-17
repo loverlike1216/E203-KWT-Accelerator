@@ -10,6 +10,9 @@
 3. Copy official.template.json to an ignored inputs/official profile. Fill exact
    paths and commands arrays for synth/sta/power/benchmark. Do not commit restricted
    bytes, private server addresses, accounts, library content or license details.
+   Add the actual sim-soc/regress command arrays too. An explicit official profile
+   never falls back to the public reference simulation. Commands must not contain
+   plaintext credentials; license access is configured outside the recorded argv.
 4. Recreate a Python environment matching the organizer's prescribed runtime. The
    local lock is Python 3.10 / TensorFlow 2.10.1; upstream used 2.4.0rc1. Validate
    explicit checkpoint bindings and unchanged preprocessing/layers. Regenerate
