@@ -1,7 +1,7 @@
 # Project state
 
-Stage 3 — reference E203 integration and clean replay
+Stage 3 — corrected reference E203 regression
 
-Next: Finish actual CPU integration evidence and clean local replay; then hand off official migration
+Next: Finish corrected layer 1 and 12 CPU/accelerator tests and clean replay, then archive portable baseline
 
 Canonical machine state: PROJECT_STATE.json.

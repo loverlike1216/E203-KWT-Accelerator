@@ -1,9 +1,9 @@
-# Context Checkpoint CP-20261017-201644__v1
+# Context Checkpoint CP-20261017-202236__v1
 
 Project: E203-KWT-Accelerator. Repository: https://github.com/loverlike1216/E203-KWT-Accelerator.git
 Workspace: E:\Codex_project\E203-KWT-Accelerator. Branch: main. Version: v1 / ACTIVE.
-Generation base commit: 22dfd8193964464247378d84497b3d84b2c35d35. Stage: Stage 3 — reference E203 integration and clean replay.
-Reason: Portable integration implemented; full RTL baseline verified; official environment remains pending. Created: 2026-10-17T20:16:44.326180+00:00.
+Generation base commit: dbe325ab4b2e06774000a7ffd86f073e95fcda32. Stage: Stage 3 — corrected reference E203 regression.
+Reason: Simulation-time-unit root cause fixed; unchanged E203 ISA regression re-passed; clean local replay ongoing. Created: 2026-10-17T20:22:36.667031+00:00.
 
 ## Goal and architecture
 Portable local implementation of the undergraduate FFN linear task; official
@@ -11,14 +11,16 @@ platform binding and PPA remain pending. Read shared/EXECUTION_CONTRACT.md.
 
 ## Verified evidence
 - v1/reports/environment/environment.json: PASS / ALTERNATIVE_VALIDATION / SHA256 bd048d88b352c4128abed41a16d9241653b874e7329c0ce6e0d61ef7ff036561
-- v1/reports/soc/reference_baseline.json: PASS / ALTERNATIVE_VALIDATION / SHA256 30b27c9d024c6cd8829037a561d5801da3b30d0b7c6b2bf1f8e625b9ae996a32
+- v1/reports/soc/reference_baseline.json: PASS / ALTERNATIVE_VALIDATION / SHA256 5a05c4b2eb90c9c5d1b536a040c168fc2ef655aa062c013aff5b010b9827ab3c
 - v1/reports/model/checkpoint_inventory.json: PASS / ALTERNATIVE_VALIDATION / SHA256 32932c0ef51b07f37f289514bf0621211c030d19458fd004827a2ca91c189b20
 - v1/reports/model/quantization.json: PASS / ALTERNATIVE_VALIDATION / SHA256 5157935132d72c63d6dff189aaea9de0ee3bd152ba2320907d60edfb804f9910
 - v1/reports/rtl/engine.json: PASS / ALTERNATIVE_VALIDATION / SHA256 ea31a4a7e3f92adeda24fd862e6164afdb5f1f71472d92bf0c8982a04e372773
-- v1/reports/synthesis/reference.json: PASS / ALTERNATIVE_VALIDATION / SHA256 02d28f77d5754c924992a20c8530f56936e43c3189988ca3633161f6540906d1
+- v1/reports/synthesis/reference.json: PASS / ALTERNATIVE_VALIDATION / SHA256 76146fd38d424f2f21d211eb6ff26e2515c3325c9023bddb06c9b4120cb85ebd
+- v1/reports/synthesis/equivalence.json: UNVERIFIED / ALTERNATIVE_VALIDATION / SHA256 bbbcd85c011b03b8e4b3e24a1d7be9fdc7cd89149b38dd32a4cafe9603b307b9
+- v1/reports/rtl/activity_debug.json: PASS / ALTERNATIVE_VALIDATION / SHA256 9cc7361e39b8e7376c70f0e9ab8e5ede1b2d27874a504234e28b875db09de04e
 
 ## Current plan and next action
-Finish actual CPU integration evidence and clean local replay; then hand off official migration
+Finish corrected layer 1 and 12 CPU/accelerator tests and clean replay, then archive portable baseline
 
 ## Decisions, blockers and limits
 Read shared/DECISIONS.md, BLOCKERS.md and ACCEPTANCE.md. Only user decisions are

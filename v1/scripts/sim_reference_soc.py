@@ -8,7 +8,7 @@ def main():
     rtl = source / "rtl/e203"
     output = WORK / "reference_soc"
     output.mkdir(parents=True, exist_ok=True)
-    files = sorted(rtl.glob("*/*.v")) + sorted(rtl.glob("*/*/*.v")) + sorted((source / "tb").glob("*.v"))
+    files = [ROOT/"v1/tb/simulation_timescale.v"] + sorted(rtl.glob("*/*.v")) + sorted(rtl.glob("*/*/*.v")) + sorted((source / "tb").glob("*.v"))
     image = output / "soc.vvp"
     _, compile_info = run([executable("iverilog"), "-g2005-sv", "-Diverilog",
         "-DDISABLE_SV_ASSERTION=1", "-s", "tb_top", "-I", rtl / "core",

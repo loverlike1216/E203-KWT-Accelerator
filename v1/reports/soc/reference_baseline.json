@@ -20,6 +20,7 @@
       "E:\\Codex_project\\E203-KWT-Accelerator\\external\\src\\e203_hbirdv2\\rtl\\e203\\perips\\apb_i2c",
       "-o",
       "E:\\Codex_project\\E203-KWT-Accelerator\\work\\reference_soc\\soc.vvp",
+      "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\tb\\simulation_timescale.v",
       "E:\\Codex_project\\E203-KWT-Accelerator\\external\\src\\e203_hbirdv2\\rtl\\e203\\core\\config.v",
       "E:\\Codex_project\\E203-KWT-Accelerator\\external\\src\\e203_hbirdv2\\rtl\\e203\\core\\e203_biu.v",
       "E:\\Codex_project\\E203-KWT-Accelerator\\external\\src\\e203_hbirdv2\\rtl\\e203\\core\\e203_clk_ctrl.v",
@@ -159,10 +160,10 @@
       "E:\\Codex_project\\E203-KWT-Accelerator\\external\\src\\e203_hbirdv2\\tb\\tb_top.v"
     ],
     "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
-    "started_at": "2026-10-17T19:55:24.480276+00:00",
+    "started_at": "2026-10-17T20:20:15.027881+00:00",
     "returncode": 0,
-    "elapsed_seconds": 1.2339999999967404,
-    "log": "work\\logs\\reference_soc_compile.log",
+    "elapsed_seconds": 0.9380000000237487,
+    "log": "work\\logs\\reference_soc_compile-20261017-202015-027881-147356.log",
     "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "tests": [
@@ -178,11 +179,11 @@
         "+TESTCASE=E:/Codex_project/E203-KWT-Accelerator/external/src/e203_hbirdv2/riscv-tools/riscv-tests/isa/generated/rv32ui-p-add"
       ],
       "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\reference_soc",
-      "started_at": "2026-10-17T19:55:25.720229+00:00",
+      "started_at": "2026-10-17T20:20:15.970070+00:00",
       "returncode": 0,
-      "elapsed_seconds": 14.98499999998603,
-      "log": "work\\logs\\rv32ui-p-add.log",
-      "log_sha256": "e8a51793b21ae58920c97bcd77b4292d7f72f0739179a47f2aad58534871320f"
+      "elapsed_seconds": 12.53100000001723,
+      "log": "work\\logs\\rv32ui-p-add-20261017-202015-970070-147356.log",
+      "log_sha256": "536b680ff3c9dd0fe76746e757539aa5de40d8c2c5ca235a4217bbdd53b6a086"
     },
     {
       "test": "rv32ui-p-lw",
@@ -196,11 +197,11 @@
         "+TESTCASE=E:/Codex_project/E203-KWT-Accelerator/external/src/e203_hbirdv2/riscv-tools/riscv-tests/isa/generated/rv32ui-p-lw"
       ],
       "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\reference_soc",
-      "started_at": "2026-10-17T19:55:40.706754+00:00",
+      "started_at": "2026-10-17T20:20:28.520864+00:00",
       "returncode": 0,
-      "elapsed_seconds": 14.702999999979511,
-      "log": "work\\logs\\rv32ui-p-lw.log",
-      "log_sha256": "7af393f90dc84a7fea316cb407241b4273f8ba94f63714f7fb6f031a3b8eb1f4"
+      "elapsed_seconds": 12.51600000000326,
+      "log": "work\\logs\\rv32ui-p-lw-20261017-202028-520864-147356.log",
+      "log_sha256": "69c29b8a3cada8328ab1f738aeffed69e86242552a6a3eb87718e2dcb7416131"
     },
     {
       "test": "rv32um-p-mul",
@@ -214,11 +215,11 @@
         "+TESTCASE=E:/Codex_project/E203-KWT-Accelerator/external/src/e203_hbirdv2/riscv-tools/riscv-tests/isa/generated/rv32um-p-mul"
       ],
       "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\reference_soc",
-      "started_at": "2026-10-17T19:55:55.414437+00:00",
+      "started_at": "2026-10-17T20:20:41.037759+00:00",
       "returncode": 0,
-      "elapsed_seconds": 14.39100000000326,
-      "log": "work\\logs\\rv32um-p-mul.log",
-      "log_sha256": "5d3f5812137bcb9ae4dafe418ef428ef9e2eacf2c27e744a4782db79ca5b5d45"
+      "elapsed_seconds": 13.063000000023749,
+      "log": "work\\logs\\rv32um-p-mul-20261017-202041-037759-147356.log",
+      "log_sha256": "0daa0cef4876d430937abb491b1f80d20b116c28a6ac57d771c30fee6b364c8d"
     }
   ],
   "limitations": [

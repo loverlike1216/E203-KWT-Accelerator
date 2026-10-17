@@ -1,9 +1,9 @@
 {
   "status": "PASS",
   "evidence_class": "ALTERNATIVE_VALIDATION",
-  "scope": "Boundary-test debug waveform only, not representative KWT power workload",
+  "scope": "Expanded signed/zero/reset/error boundary waveform only, not representative power workload",
   "waveform": "work/activity/core_edges.vcd",
-  "sha256": "223b79490629bb4e55ea65e58724d44a693f067e79fcb173d545cff72ea37aab",
+  "sha256": "78dddd874c7c5fc8c79d191dafaaa33a4427c679a1a54c2a0b9cfb29a2c59152",
   "formal_power_evidence": "NOT_VERIFIED",
   "run": {
     "command": [
@@ -12,10 +12,10 @@
       "+WAVE"
     ],
     "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\activity",
-    "started_at": "2026-10-17T20:11:04.528292+00:00",
+    "started_at": "2026-10-17T20:17:55.831026+00:00",
     "returncode": 0,
     "elapsed_seconds": 0.031000000017229468,
-    "log": "work\\logs\\activity_edges.log",
-    "log_sha256": "fea3651fedb112840a08aa71af5e80b0e5dbeccf6a1b5f52e5a2b945212c6a49"
+    "log": "work\\logs\\expanded_edges-20261017-201755-831026-132540.log",
+    "log_sha256": "20f4d7779d23557c3c49181e8aff76633392cc10912537a7d2a09024f300c2f7"
   }
 }

@@ -5,11 +5,11 @@
   "workspace_path": "E:\\Codex_project\\E203-KWT-Accelerator",
   "branch": "main",
   "active_version": "v1",
-  "current_stage": "Stage 3 — reference E203 integration and clean replay",
+  "current_stage": "Stage 3 — corrected reference E203 regression",
   "status": "PROJECT_ACTIVE",
-  "latest_context_checkpoint": "CP-20261017-201644__v1",
+  "latest_context_checkpoint": "CP-20261017-202236__v1",
   "checkpoint_commit": null,
-  "checkpoint_base_commit": "22dfd8193964464247378d84497b3d84b2c35d35",
+  "checkpoint_base_commit": "dbe325ab4b2e06774000a7ffd86f073e95fcda32",
   "checkpoint_status": "VALID_LOCAL_REFERENCE",
   "chat_source_name": "UNKNOWN",
   "open_ai_problems": [],
@@ -19,16 +19,16 @@
     "OFFICIAL_ASIC_FLOW_PENDING"
   ],
   "critical_issues": [],
-  "next_action": "Finish actual CPU integration evidence and clean local replay; then hand off official migration",
+  "next_action": "Finish corrected layer 1 and 12 CPU/accelerator tests and clean replay, then archive portable baseline",
   "environment_profile": "local_reference",
   "formal_acceptance": "NOT_VERIFIED",
-  "checkpoint_id": "CP-20261017-201644__v1",
-  "base_commit": "22dfd8193964464247378d84497b3d84b2c35d35",
-  "head_commit": "22dfd8193964464247378d84497b3d84b2c35d35",
+  "checkpoint_id": "CP-20261017-202236__v1",
+  "base_commit": "dbe325ab4b2e06774000a7ffd86f073e95fcda32",
+  "head_commit": "dbe325ab4b2e06774000a7ffd86f073e95fcda32",
   "version_status": "ACTIVE",
-  "created_at": "2026-10-17T20:16:44.326180+00:00",
+  "created_at": "2026-10-17T20:22:36.667031+00:00",
   "created_by": "Codex",
-  "checkpoint_reason": "Portable integration implemented; full RTL baseline verified; official environment remains pending",
+  "checkpoint_reason": "Simulation-time-unit root cause fixed; unchanged E203 ISA regression re-passed; clean local replay ongoing",
   "source_of_truth": "repository",
   "architecture_ref": "shared/EXECUTION_CONTRACT.md",
   "latest_validation": [
@@ -40,7 +40,7 @@
     },
     {
       "path": "v1/reports/soc/reference_baseline.json",
-      "sha256": "30b27c9d024c6cd8829037a561d5801da3b30d0b7c6b2bf1f8e625b9ae996a32",
+      "sha256": "5a05c4b2eb90c9c5d1b536a040c168fc2ef655aa062c013aff5b010b9827ab3c",
       "status": "PASS",
       "evidence_class": "ALTERNATIVE_VALIDATION"
     },
@@ -64,7 +64,19 @@
     },
     {
       "path": "v1/reports/synthesis/reference.json",
-      "sha256": "02d28f77d5754c924992a20c8530f56936e43c3189988ca3633161f6540906d1",
+      "sha256": "76146fd38d424f2f21d211eb6ff26e2515c3325c9023bddb06c9b4120cb85ebd",
+      "status": "PASS",
+      "evidence_class": "ALTERNATIVE_VALIDATION"
+    },
+    {
+      "path": "v1/reports/synthesis/equivalence.json",
+      "sha256": "bbbcd85c011b03b8e4b3e24a1d7be9fdc7cd89149b38dd32a4cafe9603b307b9",
+      "status": "UNVERIFIED",
+      "evidence_class": "ALTERNATIVE_VALIDATION"
+    },
+    {
+      "path": "v1/reports/rtl/activity_debug.json",
+      "sha256": "9cc7361e39b8e7376c70f0e9ab8e5ede1b2d27874a504234e28b875db09de04e",
       "status": "PASS",
       "evidence_class": "ALTERNATIVE_VALIDATION"
     }
@@ -75,10 +87,11 @@
     "v1/reports/model/checkpoint_inventory.json",
     "v1/reports/model/quantization.json",
     "v1/reports/rtl/engine.json",
-    "v1/reports/synthesis/reference.json"
+    "v1/reports/synthesis/reference.json",
+    "v1/reports/rtl/activity_debug.json"
   ],
   "next_actions": [
-    "Finish actual CPU integration evidence and clean local replay; then hand off official migration"
+    "Finish corrected layer 1 and 12 CPU/accelerator tests and clean replay, then archive portable baseline"
   ],
   "active_decisions": [
     "D-20261017-001",
@@ -88,7 +101,9 @@
   "known_limitations": [
     "Local reference results do not close official gates",
     "TF 2.10.1 differs from upstream 2.4.0rc1",
-    "Official 600 samples not evaluated"
+    "Official 600 samples not evaluated",
+    "Generic SAT proof timed out; mapped boundary simulation passed; official equivalence pending",
+    "Local CPU-load timing excludes external testbench preload and is not official throughput"
   ],
   "do_not_change": [
     "v1",
@@ -109,9 +124,11 @@
     "v1/reports/model/checkpoint_inventory.json",
     "v1/reports/model/quantization.json",
     "v1/reports/rtl/engine.json",
-    "v1/reports/synthesis/reference.json"
+    "v1/reports/synthesis/reference.json",
+    "v1/reports/synthesis/equivalence.json",
+    "v1/reports/rtl/activity_debug.json"
   ],
   "resume_from": "shared/CURRENT_PLAN.md",
-  "repository_status_at_reconciliation": "M .gitignore\n M README.md\n M v1/reports/environment/bootstrap.json\n M v1/reports/model/quantization.json\n M v1/scripts/common.py\n M v1/scripts/quant_check.py\n M v1/scripts/sim_engine.py\n M v1/tb/tb_core_edges.sv\n?? CHANGELOG.md\n?? Makefile\n?? REQUIREMENTS_TRACEABILITY.md\n?? THIRD_PARTY_NOTICES.md\n?? external/\n?? run.ps1\n?? v1/MIGRATION_TO_OFFICIAL.md\n?? v1/firmware/\n?? v1/reports/environment/input_preservation.json\n?? v1/reports/rtl/activity_debug.json\n?? v1/reports/soc/REFERENCE_INTERFACE.md\n?? v1/reports/synthesis/equivalence.json\n?? v1/rtl/reference_soc.sv\n?? v1/scripts/equiv_reference.py\n?? v1/scripts/run.py\n?? v1/scripts/sim_accelerator_soc.py\n?? v1/tb/tb_accelerator_soc.sv",
+  "repository_status_at_reconciliation": "M shared/BLOCKERS.md\n M shared/DECISIONS.md\n M shared/EXECUTION_CONTRACT.md\n M v1/reports/rtl/activity_debug.json\n M v1/reports/soc/reference_baseline.json\n M v1/reports/synthesis/reference.json\n M v1/scripts/checkpoint.py\n M v1/scripts/sim_accelerator_soc.py\n M v1/scripts/sim_reference_soc.py\n M v1/tb/tb_core_edges.sv\n?? v1/reports/soc/TIMESCALE_RCA.md\n?? v1/tb/simulation_timescale.v",
   "commit_note": "HEAD is the generation base, not a claim that pending files are committed. Find the checkpoint publication commit with git log -- shared/CONTEXT_CHECKPOINT.md."
 }

@@ -27,7 +27,8 @@ def main():
     evidence = []
     for relative in ("environment/environment.json", "soc/reference_baseline.json",
                      "model/checkpoint_inventory.json", "model/quantization.json",
-                     "rtl/engine.json", "soc/accelerator_soc.json", "synthesis/reference.json"):
+                     "rtl/engine.json", "soc/accelerator_soc.json", "synthesis/reference.json",
+                     "environment/clean_replay.json", "synthesis/equivalence.json", "rtl/activity_debug.json"):
         path = REPORTS / relative
         if path.exists():
             item = json.loads(path.read_text(encoding="utf-8"))
@@ -49,7 +50,7 @@ def main():
         "architecture_ref": "shared/EXECUTION_CONTRACT.md", "latest_validation": evidence,
         "completed": [e["path"] for e in evidence if e["status"] == "PASS"],
         "next_actions": [args.next_action], "active_decisions": ["D-20261017-001", "D-20261017-003", "D-20261017-004"],
-        "known_limitations": ["Local reference results do not close official gates", "TF 2.10.1 differs from upstream 2.4.0rc1", "Official 600 samples not evaluated"],
+        "known_limitations": ["Local reference results do not close official gates", "TF 2.10.1 differs from upstream 2.4.0rc1", "Official 600 samples not evaluated", "Generic SAT proof timed out; mapped boundary simulation passed; official equivalence pending", "Local CPU-load timing excludes external testbench preload and is not official throughput"],
         "do_not_change": ["v1", "repository", "pretrained weights", "acceptance thresholds", "original inputs"],
         "invariants": ["99x64 @ 64x256 + bias", "12 parameter sets", "training-only calibration", "no software substitution"],
         "evidence_refs": [e["path"] for e in evidence], "resume_from": "shared/CURRENT_PLAN.md",

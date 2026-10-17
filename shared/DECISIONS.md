@@ -15,3 +15,14 @@
   equivalence; see v1/reports/model/COMPATIBILITY_RCA.md.
 
 No ChatGPT decision has been imported. No version upgrade is approved.
+
+- D-20261017-005, source Codex implementation within user-approved local scope:
+  four signed16 MAC lanes / signed48 exact accumulators, interleaved synchronous
+  one-port operand banks and a reference ICB adapter. Actual public E203 memory
+  interface was inspected before implementation. Shared SRAM dual-port binding
+  and local addresses remain reference-specific; official interface choice awaits
+  the organizer's code. No fabricated DMA or hard-macro pin mapping is assumed.
+- D-20261017-006, source observed simulation evidence: compile a 1ns/1ps timescale
+  prefix before unchanged E203 units that contain #1 simulation flop delays.
+  Initial CPU-stuck runs were failed/stopped, not counted as PASS. Corrected
+  diagnostics execute firmware and load operands; reference ISA regression passes.

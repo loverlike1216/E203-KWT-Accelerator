@@ -13,3 +13,7 @@
   exposed in the current tool inventory. No chat title is confirmed by the user.
 
 These block formal competition acceptance, not independent local development.
+
+Local validation limitation: generic SAT equivalence did not finish in the bounded
+180-second run. Actual metadata/logs and UNVERIFIED result are retained. Generic
+mapped boundary simulation passed; full official post-synthesis acceptance stays open.

@@ -53,6 +53,18 @@ module tb_core_edges;
         // Reset must abort an active task and suppress stale output.
         rst_n=0; @(negedge clk); rst_n=1; @(negedge clk);
         if(busy||done||error||out_valid||mac_count!=0) $fatal(1,"Reset abort failed");
+        x_data=16'sd32767; b_data=0;
+        expected[0]=48'sd32767*48'sd32767*48'sd64;
+        expected[1]=-48'sd32767*48'sd32768*48'sd64;
+        expected[2]=0; expected[3]=-48'sd32767*48'sd64;
+        new_task(); for(k=0;k<64;k=k+1) respond();
+        for(l=0;l<4;l=l+1) if(out_data[l*48+:48]!==expected[l]) $fatal(1,"Positive input boundary mismatch");
+        new_task(); respond(); // Reset in the middle of accumulation as well.
+        rst_n=0; @(negedge clk); rst_n=1; @(negedge clk);
+        if(busy||done||error||out_valid||mac_count!=0) $fatal(1,"Mid-MAC reset abort failed");
+        x_data=0; b_data={48'h000000000002,48'h000000000001,48'h000000000000,48'hffffffffffff};
+        new_task(); for(k=0;k<64;k=k+1) respond();
+        if(out_data!==b_data || mac_count!=256) $fatal(1,"Zero input/bias-only result mismatch");
         x_data=1; w_data={4{16'h0001}}; b_data={4{48'h7fffffffffff}};
         new_task(); respond();
         if(!error||busy||done||out_valid) $fatal(1,"Overflow was not detected");

@@ -23,9 +23,13 @@ Constraints and invariants:
 - Original preparation materials and all official libraries stay local and ignored.
 - Preserve remote history and source evidence; no force push or version upgrades.
 
-Architecture: not frozen. A portable signed integer GEMM engine with explicit
-memory timing and an adapter boundary is the initial candidate. Selection of the
-official bus and SRAM macro bindings waits for actual official source evidence.
+Current adopted local baseline: four output-stationary INT16 lanes, exact signed48
+bias/accumulation, explicit request/response/writeback handshakes, 6x16x4096 and
+12x16x128 single-port operand banks. Reference ICB MMIO loads operands; a serializer
+writes results through the second port of a reference 512 KiB shared SRAM. Actual
+E203 C firmware controls work and reads every result. Formal official bus, shared
+SRAM arbitration/port access and hard-macro bindings remain provisional pending
+actual platform evidence. The official architecture is not frozen by this baseline.
 
 Validation: checkpoint tensor inventory; actual inference cutpoints; independent
 integer model; actual RTL full-output comparisons; reset/continuous/boundary

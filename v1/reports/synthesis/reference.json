@@ -11,10 +11,10 @@
       "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis\\core.ys"
     ],
     "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
-    "started_at": "2026-10-17T20:07:39.889952+00:00",
+    "started_at": "2026-10-17T20:17:52.360590+00:00",
     "returncode": 0,
-    "elapsed_seconds": 1.797000000020489,
-    "log": "work\\logs\\synth_core.log",
+    "elapsed_seconds": 2.23499999998603,
+    "log": "work\\logs\\synth_core-20261017-201752-360590-125496.log",
     "log_sha256": "e45cc034e3fb106e9acca6fe095c03b68747f0e9bc400e61adc2d6436327d763"
   },
   "gate_compile": {
@@ -29,10 +29,10 @@
       "E:\\Codex_project\\E203-KWT-Accelerator\\v1\\tb\\tb_core_edges.sv"
     ],
     "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
-    "started_at": "2026-10-17T20:07:41.695778+00:00",
+    "started_at": "2026-10-17T20:17:54.599533+00:00",
     "returncode": 0,
-    "elapsed_seconds": 0.39100000000325963,
-    "log": "work\\logs\\gate_edges_compile.log",
+    "elapsed_seconds": 0.5,
+    "log": "work\\logs\\gate_edges_compile-20261017-201754-599533-125496.log",
     "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   "gate_edges": {
@@ -41,11 +41,11 @@
       "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis\\gate_edges.vvp"
     ],
     "cwd": "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis",
-    "started_at": "2026-10-17T20:07:42.093194+00:00",
+    "started_at": "2026-10-17T20:17:55.107763+00:00",
     "returncode": 0,
-    "elapsed_seconds": 0.21899999998277053,
-    "log": "work\\logs\\gate_edges.log",
-    "log_sha256": "4641fc323f712ca6e6550d2e062bd050dbcfa14c1b7981dabb5f2d32b4bc0ab8"
+    "elapsed_seconds": 0.29699999996228144,
+    "log": "work\\logs\\gate_edges-20261017-201755-107763-125496.log",
+    "log_sha256": "426c2fd0d5a823b475fd78244696247a77a5edbf56fc4899364d4d0efcc217a0"
   },
   "wrapper_memory_inference": {
     "command": [
@@ -54,10 +54,10 @@
       "E:\\Codex_project\\E203-KWT-Accelerator\\work\\synthesis\\wrapper.ys"
     ],
     "cwd": "E:\\Codex_project\\E203-KWT-Accelerator",
-    "started_at": "2026-10-17T20:07:42.315072+00:00",
+    "started_at": "2026-10-17T20:17:55.422631+00:00",
     "returncode": 0,
-    "elapsed_seconds": 0.14100000000325963,
-    "log": "work\\logs\\synth_wrapper.log",
+    "elapsed_seconds": 0.15600000001722947,
+    "log": "work\\logs\\synth_wrapper-20261017-201755-422631-125496.log",
     "log_sha256": "11e296cbd8371dced6db5be57f939faf879569d74c594c43f8d311a8a9934c47"
   },
   "core_statistics": {
